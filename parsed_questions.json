@@ -3633,6 +3633,1222 @@
         "solution": "कथन 1: यह एल्गोरिदम में निष्पक्षता और पूर्वाग्रह को संबोधित करता है =सही\nएआई एथिक्स यह सुनिश्चित करने पर केंद्रित है कि कृत्रिम बुद्धिमत्ता प्रणाली निष्पक्ष और निष्पक्ष तरीके से काम करे। पक्षपातपूर्ण डेटा पर प्रशिक्षित एल्गोरिदम भेदभावपूर्ण परिणाम उत्पन्न कर सकते हैं, इसलिए नैतिक ढांचे का उद्देश्य पूर्वाग्रह का पता लगाना, कम करना और रोकना है। यह जिम्मेदार एआई विकास में एक मुख्य सिद्धांत है, जो कथन को सही बनाता है।\nकथन 2: यह एआई सिस्टम में जवाबदेही सुनिश्चित करता है =सही\nएआई एथिक्स जवाबदेही पर भी जोर देता है, जिसका अर्थ है कि डेवलपर्स, संगठनों और उपयोगकर्ताओं को एआई सिस्टम के परिणामों के लिए जिम्मेदार होना चाहिए। यह सुनिश्चित करने के लिए कि एआई द्वारा लिए गए निर्णयों का पता लगाया जा सके और उन्हें उचित ठहराया जा सके, ऑडिटेबिलिटी, पारदर्शिता और व्याख्यात्मकता जैसे तंत्रों को बढ़ावा दिया जाता है। अतः, यह कथन सही है।\nकथन 3: यह मानवीय निरीक्षण की आवश्यकता को पूरी तरह से समाप्त कर देता है = ग़लत\nएआई एथिक्स मानवीय निरीक्षण को खत्म नहीं करता है; इसके बजाय, यह एआई सिस्टम पर मानव नियंत्रण और पर्यवेक्षण की आवश्यकता को पुष्ट करता है। दुरुपयोग, त्रुटियों और अनपेक्षित परिणामों को रोकने के लिए ह्यूमन-इन-द-लूप दृष्टिकोण आवश्यक हैं।\nवाक्यांश \"पूरी तरह से समाप्त\" एक अतिवादी कथन है, जो इसे गलत बनाता है।",
         "solution_image": ""
       }
+    },
+    {
+      "number": "39",
+      "subtopic": "Budgeting Process And Tax",
+      "category": "concept",
+      "question_type": "statement",
+      "english": {
+        "number": "39",
+        "subtopic": "Budgeting Process And Tax",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "Consider the following statements regarding Public Finance:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "It deals with government revenue and expenditure.",
+            "image": ""
+          },
+          {
+            "text": "It includes taxation and borrowing.",
+            "image": ""
+          },
+          {
+            "text": "It influences economic development.",
+            "image": ""
+          },
+          {
+            "text": "It guarantees fiscal stability always.",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "Which of the statements given above are correct?",
+          "image": ""
+        },
+        "options": {
+          "A": "1 and 2 only",
+          "B": "2 and 3 only",
+          "C": "1, 2 and 3 only",
+          "D": "All four"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "c",
+        "solution": "Statement 1: It deals with government revenue and expenditure =Correct\nPublic Finance is the branch of economics that studies how the government raises revenue and spends it. It includes budgeting, allocation of resources, and management of public funds. This is the core definition, making the statement correct.\nStatement 2: It includes taxation and borrowing =Correct\nPublic finance involves various sources of government revenue, primarily taxation (direct and indirect taxes) and borrowing (internal and external debt). These are essential tools for financing government expenditure, making this statement correct.\nStatement 3: It influences economic development =Correct\nGovernment fiscal policies—through taxation, public expenditure, and subsidies—play a major role in economic development. Public finance helps in infrastructure creation, social welfare, income redistribution, and stabilization of the economy. Hence, this statement is correct.\nStatement 4: It guarantees fiscal stability always = Incorrect\nPublic finance aims to promote fiscal stability, but it does not guarantee it always. Fiscal outcomes depend on multiple factors like economic conditions, policy effectiveness, and external shocks.\nThe word “always” makes the statement absolute and incorrect.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "39",
+        "subtopic": "Budgeting Process And Tax",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "सार्वजनिक वित्त के संबंध में निम्नलिखित कथनों पर विचार करें:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "यह सरकारी राजस्व और व्यय से संबंधित है।",
+            "image": ""
+          },
+          {
+            "text": "इसमें कराधान और उधार लेना शामिल है।",
+            "image": ""
+          },
+          {
+            "text": "यह आर्थिक विकास को प्रभावित करता है।",
+            "image": ""
+          },
+          {
+            "text": "यह हमेशा राजकोषीय स्थिरता की गारंटी देता है।",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कथनों में से कौन सा सही है?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल 1 और 2",
+          "B": "केवल 2 और 3",
+          "C": "केवल 1, 2 और 3",
+          "D": "चारों"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "c",
+        "solution": "कथन 1: यह सरकारी राजस्व और व्यय से संबंधित है =सही\nसार्वजनिक वित्त अर्थशास्त्र की वह शाखा है जो अध्ययन करती है कि सरकार कैसे राजस्व बढ़ाती है और उसे कैसे खर्च करती है। इसमें बजट बनाना, संसाधनों का आवंटन और सार्वजनिक धन का प्रबंधन शामिल है। यह मूल परिभाषा है, जो कथन को सही बनाती है।\nकथन 2: इसमें कराधान और उधार शामिल हैं =सही\nसार्वजनिक वित्त में सरकारी राजस्व के विभिन्न स्रोत शामिल होते हैं, मुख्य रूप से कराधान (प्रत्यक्ष और अप्रत्यक्ष कर) और उधार (आंतरिक और बाह्य ऋण)। ये सरकारी व्यय के वित्तपोषण के लिए आवश्यक उपकरण हैं, जो इस कथन को सही बनाते हैं।\nकथन 3: यह आर्थिक विकास को प्रभावित करता है =सही\nसरकारी राजकोषीय नीतियां - कराधान, सार्वजनिक व्यय और सब्सिडी के माध्यम से - आर्थिक विकास में एक प्रमुख भूमिका निभाती हैं। सार्वजनिक वित्त बुनियादी ढांचे के निर्माण, सामाजिक कल्याण, आय पुनर्वितरण और अर्थव्यवस्था के स्थिरीकरण में मदद करता है। अतः, यह कथन सही है।\nकथन 4: यह हमेशा राजकोषीय स्थिरता की गारंटी देता है = ग़लत\nसार्वजनिक वित्त का लक्ष्य राजकोषीय स्थिरता को बढ़ावा देना है, लेकिन यह हमेशा इसकी गारंटी नहीं देता है। राजकोषीय नतीजे आर्थिक स्थिति, नीति प्रभावशीलता और बाहरी झटके जैसे कई कारकों पर निर्भर करते हैं।\nशब्द \"हमेशा\" कथन को पूर्ण और गलत बनाता है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "40",
+      "subtopic": "Executive",
+      "category": "concept",
+      "question_type": "pair",
+      "english": {
+        "number": "40",
+        "subtopic": "Executive",
+        "category": "concept",
+        "question_type": "pair",
+        "question": "Consider the following pairs:",
+        "question_image": "",
+        "statements": [],
+        "pairs": [
+          [
+            {
+              "text": "Concept",
+              "image": ""
+            },
+            {
+              "text": "Explanation",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "Fiscal Policy",
+              "image": ""
+            },
+            {
+              "text": "Government spending and taxation",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "Monetary Policy",
+              "image": ""
+            },
+            {
+              "text": "Central bank control of money supply",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "Governance",
+              "image": ""
+            },
+            {
+              "text": "Only administrative functions",
+              "image": ""
+            }
+          ]
+        ],
+        "lastQuestion": {
+          "text": "How many pairs given above are correctly matched?",
+          "image": ""
+        },
+        "options": {
+          "A": "Only one",
+          "B": "Only two",
+          "C": "All three",
+          "D": "None"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "Pair 1: Fiscal Policy =Government spending and taxation =Correct\nFiscal policy refers to the use of government expenditure and taxation to influence the economy. It is used to manage economic growth, control inflation, reduce unemployment, and achieve equitable distribution of income. Hence, this definition is accurate.\nPair 2: Monetary Policy =Central bank control of money supply =Correct\nMonetary policy is conducted by the central bank (e.g., Reserve Bank of India) to regulate the money supply and interest rates in the economy. Tools such as repo rate, CRR, and open market operations are used to control inflation and ensure liquidity. Therefore, this pairing is correct.\nPair 3: Governance =Only administrative functions = Incorrect\nGovernance is a broad concept that includes decision-making, policy formulation, implementation, accountability, and participation of various stakeholders (government, private sector, civil society).\nLimiting it to “only administrative functions” is overly narrow and incorrect. The word “only” makes the statement a typical UPSC trap.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "40",
+        "subtopic": "Executive",
+        "category": "concept",
+        "question_type": "pair",
+        "question": "निम्नलिखित जोड़ियों पर विचार करें:",
+        "question_image": "",
+        "statements": [],
+        "pairs": [
+          [
+            {
+              "text": "अवधारणा",
+              "image": ""
+            },
+            {
+              "text": "स्पष्टीकरण",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "राजकोषीय नीति",
+              "image": ""
+            },
+            {
+              "text": "सरकारी खर्च और कराधान",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "मौद्रिक नीति",
+              "image": ""
+            },
+            {
+              "text": "मुद्रा आपूर्ति पर केंद्रीय बैंक का नियंत्रण",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "शासन",
+              "image": ""
+            },
+            {
+              "text": "केवल प्रशासनिक कार्य",
+              "image": ""
+            }
+          ]
+        ],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कितने जोड़े सही सुमेलित हैं?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल एक",
+          "B": "सिर्फ दो",
+          "C": "तीनों",
+          "D": "कोई नहीं"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "जोड़ी 1: राजकोषीय नीति = सरकारी खर्च और कराधान = सही\nराजकोषीय नीति से तात्पर्य अर्थव्यवस्था को प्रभावित करने के लिए सरकारी व्यय और कराधान के उपयोग से है। इसका उपयोग आर्थिक विकास को प्रबंधित करने, मुद्रास्फीति को नियंत्रित करने, बेरोजगारी को कम करने और आय का समान वितरण प्राप्त करने के लिए किया जाता है। अत: यह परिभाषा सटीक है।\nजोड़ी 2: मौद्रिक नीति = मुद्रा आपूर्ति पर केंद्रीय बैंक का नियंत्रण = सही\nअर्थव्यवस्था में धन आपूर्ति और ब्याज दरों को विनियमित करने के लिए मौद्रिक नीति केंद्रीय बैंक (उदाहरण के लिए, भारतीय रिजर्व बैंक) द्वारा संचालित की जाती है। मुद्रास्फीति को नियंत्रित करने और तरलता सुनिश्चित करने के लिए रेपो दर, सीआरआर और खुले बाजार संचालन जैसे उपकरणों का उपयोग किया जाता है। अत: यह युग्म सही है।\nजोड़ी 3: शासन = केवल प्रशासनिक कार्य = ग़लत\nशासन एक व्यापक अवधारणा है जिसमें निर्णय लेना, नीति निर्माण, कार्यान्वयन, जवाबदेही और विभिन्न हितधारकों (सरकारी, निजी क्षेत्र, नागरिक समाज) की भागीदारी शामिल है।\nइसे \"केवल प्रशासनिक कार्यों\" तक सीमित करना अत्यधिक संकीर्ण और गलत है। \"केवल\" शब्द कथन को एक विशिष्ट यूपीएससी जाल बनाता है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "41",
+      "subtopic": "Budgeting Process And Tax",
+      "category": "concept",
+      "question_type": "normal",
+      "english": {
+        "number": "41",
+        "subtopic": "Budgeting Process And Tax",
+        "category": "concept",
+        "question_type": "normal",
+        "question": "Which of the following best explains the concept of “Primary Surplus” in public finance?",
+        "question_image": "",
+        "statements": [],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "",
+          "image": ""
+        },
+        "options": {
+          "A": "Excess of revenue receipts over revenue expenditure",
+          "B": "Fiscal deficit minus interest payments resulting in surplus",
+          "C": "Total surplus including capital receipts",
+          "D": "Difference between GDP and GNP"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "(a) Excess of revenue receipts over revenue expenditure = Incorrect\nThis defines Revenue Surplus, not primary surplus. It only considers revenue account and ignores capital components and interest payments, making it incorrect.\n(b) Fiscal deficit minus interest payments resulting in surplus =Correct\nPrimary Surplus is defined as:\nPrimary Surplus = Fiscal Deficit – Interest Payments\nIt measures the fiscal position excluding the burden of past debt (interest payments). If this value is positive, it indicates that the government’s current revenues are sufficient to meet its non-interest expenditures, reflecting better fiscal health. Hence, this option correctly explains the concept.\n(c) Total surplus including capital receipts = Incorrect\nThis is a vague and incorrect definition. Primary surplus is specifically derived from fiscal deficit and interest payments, not total surplus calculations.\n(d) Difference between GDP and GNP = Incorrect\nThis relates to national income accounting, not public finance.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "41",
+        "subtopic": "Budgeting Process And Tax",
+        "category": "concept",
+        "question_type": "normal",
+        "question": "निम्नलिखित में से कौन सार्वजनिक वित्त में \"प्राथमिक अधिशेष\" की अवधारणा को सबसे अच्छी तरह समझाता है?",
+        "question_image": "",
+        "statements": [],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "",
+          "image": ""
+        },
+        "options": {
+          "A": "राजस्व व्यय पर राजस्व प्राप्तियों की अधिकता",
+          "B": "राजकोषीय घाटा घटा ब्याज भुगतान जिसके परिणामस्वरूप अधिशेष होता है",
+          "C": "पूंजीगत प्राप्तियों सहित कुल अधिशेष",
+          "D": "जीडीपी और जीएनपी के बीच अंतर"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "(ए) राजस्व व्यय पर राजस्व प्राप्तियों की अधिकता = गलत\nयह राजस्व अधिशेष को परिभाषित करता है, प्राथमिक अधिशेष को नहीं। यह केवल राजस्व खाते पर विचार करता है और पूंजीगत घटकों और ब्याज भुगतानों को नजरअंदाज करता है, जिससे यह गलत हो जाता है।\n(बी) राजकोषीय घाटा घटा ब्याज भुगतान जिसके परिणामस्वरूप अधिशेष = सही\nप्राथमिक अधिशेष को इस प्रकार परिभाषित किया गया है:\nप्राथमिक अधिशेष = राजकोषीय घाटा - ब्याज भुगतान\nयह पिछले ऋण (ब्याज भुगतान) के बोझ को छोड़कर राजकोषीय स्थिति को मापता है। यदि यह मान सकारात्मक है, तो यह इंगित करता है कि सरकार का वर्तमान राजस्व उसके गैर-ब्याज व्यय को पूरा करने के लिए पर्याप्त है, जो बेहतर राजकोषीय स्वास्थ्य को दर्शाता है। इसलिए, यह विकल्प अवधारणा को सही ढंग से समझाता है।\n(सी) पूंजीगत प्राप्तियों सहित कुल अधिशेष = गलत\nयह एक अस्पष्ट एवं ग़लत परिभाषा है। प्राथमिक अधिशेष विशेष रूप से राजकोषीय घाटे और ब्याज भुगतान से प्राप्त होता है, न कि कुल अधिशेष गणना से।\n(डी) जीडीपी और जीएनपी के बीच अंतर = गलत\nयह राष्ट्रीय आय लेखांकन से संबंधित है, सार्वजनिक वित्त से नहीं।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "42",
+      "subtopic": "Money, Banking And Financial Institutions",
+      "category": "concept",
+      "question_type": "statement",
+      "english": {
+        "number": "42",
+        "subtopic": "Money, Banking And Financial Institutions",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "Consider the following statements regarding Open Market Operations (OMO):",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "RBI buys or sells government securities to regulate liquidity.",
+            "image": ""
+          },
+          {
+            "text": "It directly controls fiscal deficit of the government.",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "Which of the statements given above is/are correct?",
+          "image": ""
+        },
+        "options": {
+          "A": "1 only",
+          "B": "2 only",
+          "C": "Both 1 and 2",
+          "D": "Neither 1 nor 2"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "a",
+        "solution": "Statement 1: RBI buys or sells government securities to regulate liquidity =Correct\nOpen Market Operations (OMO) are a key monetary policy tool used by the Reserve Bank of India to manage liquidity in the banking system.\n(1) When RBI buys government securities, it injects liquidity (money supply increases).\n(1) When RBI sells securities, it absorbs liquidity (money supply decreases).\nThus, OMOs help in controlling inflation, stabilizing interest rates, and ensuring adequate liquidity, making this statement correct.\nStatement 2: It directly controls fiscal deficit of the government = Incorrect\nFiscal deficit is determined by the government’s revenue and expenditure decisions, not by RBI’s monetary operations.\nWhile OMOs may indirectly influence borrowing costs and liquidity conditions, they do not directly control fiscal deficit. The statement is therefore incorrect.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "42",
+        "subtopic": "Money, Banking And Financial Institutions",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "ओपन मार्केट ऑपरेशंस (ओएमओ) के संबंध में निम्नलिखित कथनों पर विचार करें:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "आरबीआई तरलता को विनियमित करने के लिए सरकारी प्रतिभूतियों को खरीदता या बेचता है।",
+            "image": ""
+          },
+          {
+            "text": "यह सीधे तौर पर सरकार के राजकोषीय घाटे को नियंत्रित करता है।",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल 1",
+          "B": "केवल 2",
+          "C": "1 और 2 दोनों",
+          "D": "न 1 न 2"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "a",
+        "solution": "कथन 1: आरबीआई तरलता को विनियमित करने के लिए सरकारी प्रतिभूतियों को खरीदता या बेचता है =सही\nओपन मार्केट ऑपरेशंस (ओएमओ) एक प्रमुख मौद्रिक नीति उपकरण है जिसका उपयोग भारतीय रिजर्व बैंक द्वारा बैंकिंग प्रणाली में तरलता का प्रबंधन करने के लिए किया जाता है।\n(1) जब आरबीआई सरकारी प्रतिभूतियां खरीदता है, तो यह तरलता बढ़ाता है (पैसे की आपूर्ति बढ़ जाती है)।\n(1) जब आरबीआई प्रतिभूतियां बेचता है, तो यह तरलता को अवशोषित करता है (धन की आपूर्ति कम हो जाती है)।\nइस प्रकार, ओएमओ मुद्रास्फीति को नियंत्रित करने, ब्याज दरों को स्थिर करने और पर्याप्त तरलता सुनिश्चित करने में मदद करते हैं, जिससे यह कथन सही हो जाता है।\nकथन 2: यह सरकार के राजकोषीय घाटे को सीधे नियंत्रित करता है = गलत\nराजकोषीय घाटा सरकार के राजस्व और व्यय निर्णयों से निर्धारित होता है, आरबीआई के मौद्रिक संचालन से नहीं।\nजबकि ओएमओ अप्रत्यक्ष रूप से उधार लेने की लागत और तरलता की स्थिति को प्रभावित कर सकते हैं, वे सीधे राजकोषीय घाटे को नियंत्रित नहीं करते हैं। इसलिए कथन गलत है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "43",
+      "subtopic": "Inclusive Growth And Employment",
+      "category": "concept",
+      "question_type": "statement",
+      "english": {
+        "number": "43",
+        "subtopic": "Inclusive Growth And Employment",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "Consider the following statements regarding Human Capital:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "It refers to skills and knowledge of workforce.",
+            "image": ""
+          },
+          {
+            "text": "It enhances productivity of labour.",
+            "image": ""
+          },
+          {
+            "text": "It has no role in economic growth.",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "Which of the statements given above are correct?",
+          "image": ""
+        },
+        "options": {
+          "A": "1 only",
+          "B": "1 and 2 only",
+          "C": "2 and 3 only",
+          "D": "All three"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "Statement 1: It refers to skills and knowledge of workforce =Correct\nHuman Capital represents the skills, education, knowledge, health, and abilities possessed by individuals that contribute to economic productivity. Investments in education, training, and healthcare enhance human capital. Hence, this statement is correct.\nStatement 2: It enhances productivity of labour =Correct\nHigher levels of human capital lead to better efficiency, innovation, and productivity in the workforce. Skilled workers can use technology effectively, improve output quality, and contribute to economic advancement. Therefore, this statement is correct.\nStatement 3: It has no role in economic growth = Incorrect\nHuman capital is a key driver of economic growth. Economies with better-educated and skilled populations tend to achieve higher growth rates, innovation, and competitiveness.\nThe phrase “no role” is an extreme statement, making it incorrect.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "43",
+        "subtopic": "Inclusive Growth And Employment",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "मानव पूंजी के संबंध में निम्नलिखित कथनों पर विचार करें:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "यह कार्यबल के कौशल और ज्ञान को संदर्भित करता है।",
+            "image": ""
+          },
+          {
+            "text": "यह श्रम की उत्पादकता को बढ़ाता है।",
+            "image": ""
+          },
+          {
+            "text": "आर्थिक विकास में इसकी कोई भूमिका नहीं है.",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कथनों में से कौन सा सही है?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल 1",
+          "B": "केवल 1 और 2",
+          "C": "केवल 2 और 3",
+          "D": "तीनों"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "कथन 1: यह कार्यबल के कौशल और ज्ञान को संदर्भित करता है =सही\nमानव पूंजी व्यक्तियों के कौशल, शिक्षा, ज्ञान, स्वास्थ्य और क्षमताओं का प्रतिनिधित्व करती है जो आर्थिक उत्पादकता में योगदान करते हैं। शिक्षा, प्रशिक्षण और स्वास्थ्य देखभाल में निवेश मानव पूंजी को बढ़ाता है। अतः, यह कथन सही है।\nकथन 2: यह श्रम की उत्पादकता को बढ़ाता है =सही\nमानव पूंजी का उच्च स्तर कार्यबल में बेहतर दक्षता, नवाचार और उत्पादकता को जन्म देता है। कुशल श्रमिक प्रौद्योगिकी का प्रभावी ढंग से उपयोग कर सकते हैं, उत्पादन की गुणवत्ता में सुधार कर सकते हैं और आर्थिक उन्नति में योगदान दे सकते हैं। अत: यह कथन सत्य है।\nकथन 3: आर्थिक विकास में इसकी कोई भूमिका नहीं है = ग़लत\nमानव पूंजी आर्थिक विकास का प्रमुख चालक है। बेहतर शिक्षित और कुशल आबादी वाली अर्थव्यवस्थाएं उच्च विकास दर, नवाचार और प्रतिस्पर्धात्मकता हासिल करती हैं।\nवाक्यांश \"कोई भूमिका नहीं\" एक अतिवादी कथन है, जो इसे गलत बनाता है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "44",
+      "subtopic": "Inclusive Growth And Employment",
+      "category": "concept",
+      "question_type": "statement",
+      "english": {
+        "number": "44",
+        "subtopic": "Inclusive Growth And Employment",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "Consider the following statements regarding Inclusive Growth:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "It ensures participation of all sections of society.",
+            "image": ""
+          },
+          {
+            "text": "It reduces inequality.",
+            "image": ""
+          },
+          {
+            "text": "It promotes equitable access to opportunities.",
+            "image": ""
+          },
+          {
+            "text": "It guarantees equal income distribution.",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "Which of the statements given above are correct?",
+          "image": ""
+        },
+        "options": {
+          "A": "1 and 2 only",
+          "B": "2 and 3 only",
+          "C": "1, 2 and 3 only",
+          "D": "All four"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "c",
+        "solution": "Statement 1: It ensures participation of all sections of society =Correct\nInclusive growth emphasizes that the benefits of economic development should reach all sections of society, including marginalized and vulnerable groups. It promotes broad-based participation in economic activities, making this statement correct.\nStatement 2: It reduces inequality =Correct\nA core objective of inclusive growth is to reduce income and social inequalities by ensuring fair distribution of opportunities and resources. Policies targeting poverty alleviation, employment generation, and social welfare contribute to this goal. Hence, this statement is correct.\nStatement 3: It promotes equitable access to opportunities =Correct\nInclusive growth focuses on providing equal access to education, healthcare, finance, and employment opportunities. This ensures that individuals can improve their socio-economic conditions, making the statement correct.\nStatement 4: It guarantees equal income distribution = Incorrect\nInclusive growth aims to reduce disparities, but it does not guarantee perfect equality in income distribution. Economic systems naturally involve some level of income variation.\nThe word “guarantees” makes the statement absolute and incorrect.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "44",
+        "subtopic": "Inclusive Growth And Employment",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "समावेशी विकास के संबंध में निम्नलिखित कथनों पर विचार करें:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "यह समाज के सभी वर्गों की भागीदारी सुनिश्चित करता है।",
+            "image": ""
+          },
+          {
+            "text": "यह असमानता को कम करता है।",
+            "image": ""
+          },
+          {
+            "text": "यह अवसरों तक न्यायसंगत पहुंच को बढ़ावा देता है।",
+            "image": ""
+          },
+          {
+            "text": "यह समान आय वितरण की गारंटी देता है।",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कथनों में से कौन सा सही है?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल 1 और 2",
+          "B": "केवल 2 और 3",
+          "C": "केवल 1, 2 और 3",
+          "D": "चारों"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "c",
+        "solution": "कथन 1: यह समाज के सभी वर्गों की भागीदारी सुनिश्चित करता है =सही\nसमावेशी विकास इस बात पर जोर देता है कि आर्थिक विकास का लाभ समाज के सभी वर्गों तक पहुंचना चाहिए, जिसमें हाशिए पर मौजूद और कमजोर समूह भी शामिल हैं। यह आर्थिक गतिविधियों में व्यापक भागीदारी को बढ़ावा देता है, जो इस कथन को सही बनाता है।\nकथन 2: यह असमानता को कम करता है =सही\nसमावेशी विकास का मुख्य उद्देश्य अवसरों और संसाधनों का उचित वितरण सुनिश्चित करके आय और सामाजिक असमानताओं को कम करना है। गरीबी उन्मूलन, रोजगार सृजन और सामाजिक कल्याण को लक्षित करने वाली नीतियां इस लक्ष्य में योगदान करती हैं। अतः, यह कथन सही है।\nकथन 3: यह अवसरों तक न्यायसंगत पहुंच को बढ़ावा देता है =सही\nसमावेशी विकास शिक्षा, स्वास्थ्य देखभाल, वित्त और रोजगार के अवसरों तक समान पहुंच प्रदान करने पर केंद्रित है। यह सुनिश्चित करता है कि व्यक्ति अपनी सामाजिक-आर्थिक स्थितियों में सुधार कर सकते हैं, जिससे यह कथन सही हो जाता है।\nकथन 4: यह समान आय वितरण की गारंटी देता है = ग़लत\nसमावेशी विकास का लक्ष्य असमानताओं को कम करना है, लेकिन यह आय वितरण में पूर्ण समानता की गारंटी नहीं देता है। आर्थिक प्रणालियों में स्वाभाविक रूप से कुछ स्तर की आय भिन्नता शामिल होती है।\nशब्द \"गारंटी\" कथन को पूर्ण और गलत बनाता है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "45",
+      "subtopic": "Macro Fundamentals, GDP, Investment, Growth",
+      "category": "concept",
+      "question_type": "pair",
+      "english": {
+        "number": "45",
+        "subtopic": "Macro Fundamentals, GDP, Investment, Growth",
+        "category": "concept",
+        "question_type": "pair",
+        "question": "Consider the following pairs:",
+        "question_image": "",
+        "statements": [],
+        "pairs": [
+          [
+            {
+              "text": "Concept",
+              "image": ""
+            },
+            {
+              "text": "Explanation",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "GDP",
+              "image": ""
+            },
+            {
+              "text": "Total value of goods and services produced",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "GNP",
+              "image": ""
+            },
+            {
+              "text": "GDP plus net factor income from abroad",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "NNP",
+              "image": ""
+            },
+            {
+              "text": "GDP minus depreciation only",
+              "image": ""
+            }
+          ]
+        ],
+        "lastQuestion": {
+          "text": "How many pairs given above are correctly matched?",
+          "image": ""
+        },
+        "options": {
+          "A": "Only one",
+          "B": "Only two",
+          "C": "All three",
+          "D": "None"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "Pair 1: GDP =Total value of goods and services produced =Correct\nGross Domestic Product (GDP) measures the total monetary value of all final goods and services produced within a country’s domestic territory during a specific period. It is the most widely used indicator of economic activity. Hence, this definition is correct.\nPair 2: GNP =GDP plus net factor income from abroad =Correct\nGross National Product (GNP) is calculated as:\nGNP = GDP + Net Factor Income from Abroad (NFIA)\nIt includes income earned by residents from abroad and excludes income earned by foreign residents domestically. Therefore, this pairing is accurate.\nPair 3: NNP =GDP minus depreciation only = Incorrect\nThis is incorrect because Net National Product (NNP) is derived as:\nNNP = GNP – Depreciation, not GDP minus depreciation.\nThe given statement ignores the NFIA component, making it conceptually wrong.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "45",
+        "subtopic": "Macro Fundamentals, GDP, Investment, Growth",
+        "category": "concept",
+        "question_type": "pair",
+        "question": "निम्नलिखित जोड़ियों पर विचार करें:",
+        "question_image": "",
+        "statements": [],
+        "pairs": [
+          [
+            {
+              "text": "अवधारणा",
+              "image": ""
+            },
+            {
+              "text": "स्पष्टीकरण",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "सकल घरेलू उत्पाद",
+              "image": ""
+            },
+            {
+              "text": "उत्पादित वस्तुओं और सेवाओं का कुल मूल्य",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "जीएनपी",
+              "image": ""
+            },
+            {
+              "text": "जीडीपी प्लस विदेश से शुद्ध कारक आय",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "एनएनपी",
+              "image": ""
+            },
+            {
+              "text": "सकल घरेलू उत्पाद में केवल अवमूल्यन घटा",
+              "image": ""
+            }
+          ]
+        ],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कितने जोड़े सही सुमेलित हैं?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल एक",
+          "B": "सिर्फ दो",
+          "C": "तीनों",
+          "D": "कोई नहीं"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "जोड़ी 1: जीडीपी = उत्पादित वस्तुओं और सेवाओं का कुल मूल्य = सही\nसकल घरेलू उत्पाद (जीडीपी) एक विशिष्ट अवधि के दौरान किसी देश के घरेलू क्षेत्र के भीतर उत्पादित सभी अंतिम वस्तुओं और सेवाओं के कुल मौद्रिक मूल्य को मापता है। यह आर्थिक गतिविधि का सबसे व्यापक रूप से उपयोग किया जाने वाला संकेतक है। अत: यह परिभाषा सही है।\nजोड़ी 2: जीएनपी = जीडीपी प्लस विदेश से शुद्ध कारक आय = सही\nसकल राष्ट्रीय उत्पाद (जीएनपी) की गणना इस प्रकार की जाती है:\nजीएनपी = जीडीपी + विदेश से शुद्ध कारक आय (एनएफआईए)\nइसमें विदेश के निवासियों द्वारा अर्जित आय शामिल है और विदेशी निवासियों द्वारा घरेलू स्तर पर अर्जित आय शामिल नहीं है। अत: यह युग्म सटीक है।\nजोड़ी 3: एनएनपी = जीडीपी घटा केवल मूल्यह्रास = गलत\nयह गलत है क्योंकि शुद्ध राष्ट्रीय उत्पाद (एनएनपी) इस प्रकार प्राप्त होता है:\nएनएनपी = जीएनपी - मूल्यह्रास, जीडीपी घटा मूल्यह्रास नहीं।\nदिया गया कथन एनएफआईए घटक को नजरअंदाज करता है, जिससे यह अवधारणात्मक रूप से गलत हो जाता है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "46",
+      "subtopic": "Basic Of Environment And Ecology",
+      "category": "concept",
+      "question_type": "normal",
+      "english": {
+        "number": "46",
+        "subtopic": "Basic Of Environment And Ecology",
+        "category": "concept",
+        "question_type": "normal",
+        "question": "Which of the following best explains the concept of “Ecological Succession”?",
+        "question_image": "",
+        "statements": [],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "",
+          "image": ""
+        },
+        "options": {
+          "A": "Sudden destruction of ecosystem",
+          "B": "Gradual change in species composition over time",
+          "C": "Migration of species",
+          "D": "Loss of biodiversity"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "(a) Sudden destruction of ecosystem = Incorrect\nThis refers to disturbances like natural disasters (fires, floods), not the process of ecological development. Ecological succession is a gradual process, not sudden destruction.\n(b) Gradual change in species composition over time =Correct\nEcological succession is the gradual and sequential change in species composition in an ecosystem over time. It involves the replacement of one community by another, starting from pioneer species and progressing towards a stable climax community.\nThis process can occur in newly formed habitats (primary succession) or in disturbed ecosystems (secondary succession). Hence, this option correctly explains the concept.\n(c) Migration of species = Incorrect\nMigration refers to movement of species from one place to another, not the transformation of an ecosystem over time.\n(d) Loss of biodiversity = Incorrect\nWhile biodiversity loss may occur due to disturbances, ecological succession itself is about development and change, often increasing complexity, not simply loss.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "46",
+        "subtopic": "Basic Of Environment And Ecology",
+        "category": "concept",
+        "question_type": "normal",
+        "question": "निम्नलिखित में से कौन \"पारिस्थितिक उत्तराधिकार\" की अवधारणा को सबसे अच्छी तरह से समझाता है?",
+        "question_image": "",
+        "statements": [],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "",
+          "image": ""
+        },
+        "options": {
+          "A": "पारिस्थितिकी तंत्र का अचानक विनाश",
+          "B": "समय के साथ प्रजातियों की संरचना में क्रमिक परिवर्तन",
+          "C": "प्रजातियों का प्रवास",
+          "D": "जैव विविधता का नुकसान"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "(ए) पारिस्थितिकी तंत्र का अचानक विनाश = गलत\nयह प्राकृतिक आपदाओं (आग, बाढ़) जैसी गड़बड़ी को संदर्भित करता है, न कि पारिस्थितिक विकास की प्रक्रिया को। पारिस्थितिक उत्तराधिकार एक क्रमिक प्रक्रिया है, अचानक विनाश नहीं।\n(बी) समय के साथ प्रजातियों की संरचना में क्रमिक परिवर्तन = सही\nपारिस्थितिक उत्तराधिकार किसी पारिस्थितिकी तंत्र में समय के साथ प्रजातियों की संरचना में होने वाला क्रमिक और क्रमिक परिवर्तन है। इसमें एक समुदाय का दूसरे समुदाय द्वारा प्रतिस्थापन, अग्रणी प्रजातियों से शुरू होकर एक स्थिर चरमोत्कर्ष समुदाय की ओर बढ़ना शामिल है।\nयह प्रक्रिया नवगठित आवासों (प्राथमिक उत्तराधिकार) या अशांत पारिस्थितिक तंत्र (द्वितीयक उत्तराधिकार) में हो सकती है। इसलिए, यह विकल्प अवधारणा को सही ढंग से समझाता है।\n(सी) प्रजातियों का प्रवासन = गलत\nप्रवासन का तात्पर्य प्रजातियों के एक स्थान से दूसरे स्थान पर जाने से है, न कि समय के साथ पारिस्थितिकी तंत्र के परिवर्तन से।\n(डी) जैव विविधता की हानि = गलत\nजबकि गड़बड़ी के कारण जैव विविधता का नुकसान हो सकता है, पारिस्थितिक उत्तराधिकार स्वयं विकास और परिवर्तन के बारे में है, जो अक्सर जटिलता बढ़ाता है, न कि केवल नुकसान।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "47",
+      "subtopic": "Basic Of Environment And Ecology",
+      "category": "concept",
+      "question_type": "statement",
+      "english": {
+        "number": "47",
+        "subtopic": "Basic Of Environment And Ecology",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "Consider the following statements regarding Food Chain:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "It represents flow of energy in ecosystem.",
+            "image": ""
+          },
+          {
+            "text": "It always consists of exactly four trophic levels.",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "Which of the statements given above is/are correct?",
+          "image": ""
+        },
+        "options": {
+          "A": "1 only",
+          "B": "2 only",
+          "C": "Both 1 and 2",
+          "D": "Neither 1 nor 2"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "a",
+        "solution": "Statement 1: It represents flow of energy in ecosystem =Correct\nA food chain illustrates the transfer of energy and nutrients from one organism to another in an ecosystem. Energy flows from producers (plants) to primary consumers (herbivores) and then to higher-level consumers (carnivores/omnivores).\nThis linear pathway helps in understanding how energy moves through different trophic levels, making the statement correct.\nStatement 2: It always consists of exactly four trophic levels = Incorrect\nFood chains do not have a fixed number of trophic levels. The number can vary depending on the ecosystem, typically ranging from 3 to 5 levels, because energy decreases at each level (10% law).\nThe word “exactly” makes the statement rigid and incorrect.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "47",
+        "subtopic": "Basic Of Environment And Ecology",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "खाद्य श्रृंखला के संबंध में निम्नलिखित कथनों पर विचार करें:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "यह पारिस्थितिकी तंत्र में ऊर्जा के प्रवाह का प्रतिनिधित्व करता है।",
+            "image": ""
+          },
+          {
+            "text": "इसमें हमेशा ठीक चार पोषी स्तर होते हैं।",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल 1",
+          "B": "केवल 2",
+          "C": "1 और 2 दोनों",
+          "D": "न 1 न 2"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "a",
+        "solution": "कथन 1: यह पारिस्थितिकी तंत्र में ऊर्जा के प्रवाह को दर्शाता है =सही\nएक खाद्य श्रृंखला एक पारिस्थितिकी तंत्र में एक जीव से दूसरे जीव में ऊर्जा और पोषक तत्वों के हस्तांतरण को दर्शाती है। ऊर्जा उत्पादकों (पौधों) से प्राथमिक उपभोक्ताओं (शाकाहारी) और फिर उच्च-स्तरीय उपभोक्ताओं (मांसाहारी/सर्वाहारी) तक प्रवाहित होती है।\nयह रैखिक मार्ग यह समझने में मदद करता है कि ऊर्जा विभिन्न पोषी स्तरों से कैसे गुजरती है, जिससे यह कथन सही हो जाता है।\nकथन 2: इसमें हमेशा ठीक चार पोषी स्तर होते हैं = गलत\nखाद्य श्रृंखलाओं में पोषी स्तरों की कोई निश्चित संख्या नहीं होती है। संख्या पारिस्थितिकी तंत्र के आधार पर भिन्न हो सकती है, आमतौर पर 3 से 5 स्तरों तक, क्योंकि प्रत्येक स्तर पर ऊर्जा घटती है (10% कानून)।\nशब्द \"बिल्कुल\" कथन को कठोर और गलत बनाता है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "48",
+      "subtopic": "Energy: Conventional And Alternative",
+      "category": "concept",
+      "question_type": "statement",
+      "english": {
+        "number": "48",
+        "subtopic": "Energy: Conventional And Alternative",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "Consider the following statements regarding Renewable Energy:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "Solar energy is renewable.",
+            "image": ""
+          },
+          {
+            "text": "Wind energy is renewable.",
+            "image": ""
+          },
+          {
+            "text": "Coal energy is renewable.",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "Which of the statements given above are correct?",
+          "image": ""
+        },
+        "options": {
+          "A": "1 only",
+          "B": "1 and 2 only",
+          "C": "2 and 3 only",
+          "D": "All three"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "Statement 1: Solar energy is renewable =Correct\nSolar energy is derived from the Sun, which is an inexhaustible and naturally replenishing source on a human timescale. It can be continuously harnessed using technologies like solar panels, making it a classic example of renewable energy.\nStatement 2: Wind energy is renewable =Correct\nWind energy is generated from the movement of air caused by solar heating of the Earth’s surface. Since wind patterns are continuously regenerated by natural processes, it is also a renewable and sustainable energy source.\nStatement 3: Coal energy is renewable = Incorrect\nCoal is a fossil fuel formed over millions of years from organic matter. It is non-renewable because its formation takes geological time, and it cannot be replenished within a human timeframe.\nThus, classifying coal as renewable is incorrect.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "48",
+        "subtopic": "Energy: Conventional And Alternative",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "नवीकरणीय ऊर्जा के संबंध में निम्नलिखित कथनों पर विचार करें:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "सौर ऊर्जा नवीकरणीय है।",
+            "image": ""
+          },
+          {
+            "text": "पवन ऊर्जा नवीकरणीय है।",
+            "image": ""
+          },
+          {
+            "text": "कोयला ऊर्जा नवीकरणीय है।",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कथनों में से कौन सा सही है?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल 1",
+          "B": "केवल 1 और 2",
+          "C": "केवल 2 और 3",
+          "D": "तीनों"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "कथन 1: सौर ऊर्जा नवीकरणीय है = सही है\nसौर ऊर्जा सूर्य से प्राप्त होती है, जो मानव काल के पैमाने पर एक अटूट और प्राकृतिक रूप से पुनःपूर्ति करने वाला स्रोत है। सौर पैनलों जैसी प्रौद्योगिकियों का उपयोग करके इसका लगातार उपयोग किया जा सकता है, जिससे यह नवीकरणीय ऊर्जा का एक उत्कृष्ट उदाहरण बन जाता है।\nकथन 2: पवन ऊर्जा नवीकरणीय है=सही\nपवन ऊर्जा पृथ्वी की सतह के सौर तापन के कारण होने वाली हवा की गति से उत्पन्न होती है। चूंकि पवन पैटर्न प्राकृतिक प्रक्रियाओं द्वारा लगातार पुनर्जीवित होते हैं, इसलिए यह एक नवीकरणीय और टिकाऊ ऊर्जा स्रोत भी है।\nकथन 3: कोयला ऊर्जा नवीकरणीय है = ग़लत\nकोयला एक जीवाश्म ईंधन है जो लाखों वर्षों में कार्बनिक पदार्थों से बना है। यह गैर-नवीकरणीय है क्योंकि इसके निर्माण में भूवैज्ञानिक समय लगता है, और इसे मानव समय सीमा के भीतर फिर से पूरा नहीं किया जा सकता है।\nइस प्रकार, कोयले को नवीकरणीय के रूप में वर्गीकृत करना गलत है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "49",
+      "subtopic": "Centre-State Relations & LSG",
+      "category": "concept",
+      "question_type": "statement",
+      "english": {
+        "number": "49",
+        "subtopic": "Centre-State Relations & LSG",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "Consider the following statements regarding Public Accountability:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "It ensures answerability of public officials.",
+            "image": ""
+          },
+          {
+            "text": "It strengthens democratic governance.",
+            "image": ""
+          },
+          {
+            "text": "It enhances transparency.",
+            "image": ""
+          },
+          {
+            "text": "It eliminates corruption completely.",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "Which of the statements given above are correct?",
+          "image": ""
+        },
+        "options": {
+          "A": "1 and 2 only",
+          "B": "2 and 3 only",
+          "C": "1, 2 and 3 only",
+          "D": "All four"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "c",
+        "solution": "Statement 1: It ensures answerability of public officials =Correct\nPublic accountability means that government officials and institutions are answerable for their decisions and actions to the public and oversight bodies. Mechanisms like audits, legislative scrutiny, and grievance redress ensure that authority is exercised responsibly. Hence, this statement is correct.\nStatement 2: It strengthens democratic governance =Correct\nAccountability is a core pillar of democracy. By making authorities answerable, it enhances trust, legitimacy, and responsiveness in governance. It ensures that power is exercised in line with public interest, thereby strengthening democratic systems.\nStatement 3: It enhances transparency =Correct\nPublic accountability is closely linked with transparency, as access to information enables citizens to monitor government actions. Tools like RTI, open data portals, and disclosure norms improve visibility of decisions and processes, making this statement correct.\nStatement 4: It eliminates corruption completely = Incorrect\nWhile accountability mechanisms reduce and deter corruption, they cannot eliminate it entirely. Corruption depends on multiple structural and behavioral factors.\nThe phrase “completely eliminates” is an extreme statement, making it incorrect.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "49",
+        "subtopic": "Centre-State Relations & LSG",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "सार्वजनिक जवाबदेही के संबंध में निम्नलिखित कथनों पर विचार करें:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "यह सार्वजनिक अधिकारियों की जवाबदेही सुनिश्चित करता है।",
+            "image": ""
+          },
+          {
+            "text": "यह लोकतांत्रिक शासन को मजबूत करता है।",
+            "image": ""
+          },
+          {
+            "text": "यह पारदर्शिता बढ़ाता है.",
+            "image": ""
+          },
+          {
+            "text": "इससे भ्रष्टाचार पूरी तरह खत्म हो जाता है।",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कथनों में से कौन सा सही है?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल 1 और 2",
+          "B": "केवल 2 और 3",
+          "C": "केवल 1, 2 और 3",
+          "D": "चारों"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "c",
+        "solution": "कथन 1: यह सार्वजनिक अधिकारियों की उत्तरदायित्व सुनिश्चित करता है =सही\nसार्वजनिक जवाबदेही का अर्थ है कि सरकारी अधिकारी और संस्थान अपने निर्णयों और कार्यों के लिए जनता और निरीक्षण निकायों के प्रति जवाबदेह हैं। ऑडिट, विधायी जांच और शिकायत निवारण जैसे तंत्र यह सुनिश्चित करते हैं कि प्राधिकार का उपयोग जिम्मेदारी से किया जाए। अतः, यह कथन सही है।\nकथन 2: यह लोकतांत्रिक शासन को मजबूत करता है =सही\nजवाबदेही लोकतंत्र का मुख्य स्तंभ है। अधिकारियों को जवाबदेह बनाकर, यह शासन में विश्वास, वैधता और जवाबदेही को बढ़ाता है। यह सुनिश्चित करता है कि सत्ता का प्रयोग सार्वजनिक हित के अनुरूप किया जाए, जिससे लोकतांत्रिक व्यवस्थाएं मजबूत हों।\nकथन 3: यह पारदर्शिता बढ़ाता है =सही\nसार्वजनिक जवाबदेही पारदर्शिता के साथ निकटता से जुड़ी हुई है, क्योंकि सूचना तक पहुंच नागरिकों को सरकारी कार्यों की निगरानी करने में सक्षम बनाती है। आरटीआई, खुले डेटा पोर्टल और प्रकटीकरण मानदंड जैसे उपकरण निर्णयों और प्रक्रियाओं की दृश्यता में सुधार करते हैं, जिससे यह कथन सही हो जाता है।\nकथन 4: यह भ्रष्टाचार को पूरी तरह से समाप्त कर देता है = ग़लत\nहालाँकि जवाबदेही तंत्र भ्रष्टाचार को कम करते हैं और रोकते हैं, लेकिन वे इसे पूरी तरह से समाप्त नहीं कर सकते हैं। भ्रष्टाचार कई संरचनात्मक और व्यवहारिक कारकों पर निर्भर करता है।\nवाक्यांश \"पूरी तरह से समाप्त\" एक अतिवादी कथन है, जो इसे गलत बनाता है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "50",
+      "subtopic": "Executive",
+      "category": "concept",
+      "question_type": "pair",
+      "english": {
+        "number": "50",
+        "subtopic": "Executive",
+        "category": "concept",
+        "question_type": "pair",
+        "question": "Consider the following pairs:",
+        "question_image": "",
+        "statements": [],
+        "pairs": [
+          [
+            {
+              "text": "Institution",
+              "image": ""
+            },
+            {
+              "text": "Role",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "RBI",
+              "image": ""
+            },
+            {
+              "text": "Monetary policy",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "SEBI",
+              "image": ""
+            },
+            {
+              "text": "Securities market regulation",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "UPSC",
+              "image": ""
+            },
+            {
+              "text": "Conducts elections",
+              "image": ""
+            }
+          ]
+        ],
+        "lastQuestion": {
+          "text": "How many pairs given above are correctly matched?",
+          "image": ""
+        },
+        "options": {
+          "A": "Only one",
+          "B": "Only two",
+          "C": "All three",
+          "D": "None"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "Pair 1: RBI =Monetary policy =Correct\nThe Reserve Bank of India is the central bank responsible for formulating and implementing monetary policy. Through tools like repo rate, CRR, and OMOs, it regulates liquidity, controls inflation, and maintains financial stability. Hence, this pairing is correct.\nPair 2: SEBI =Securities market regulation =Correct\nThe Securities and Exchange Board of India regulates the securities market, including stock exchanges, brokers, and listed companies. Its role is to protect investor interests, ensure market transparency, and prevent malpractices. Therefore, this pair is correctly matched.\nPair 3: UPSC =Conducts elections = Incorrect\nThe Union Public Service Commission is responsible for conducting civil services examinations and recruitment to central services, not elections. Elections are conducted by the Election Commission of India. Hence, this pairing is incorrect.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "50",
+        "subtopic": "Executive",
+        "category": "concept",
+        "question_type": "pair",
+        "question": "निम्नलिखित जोड़ियों पर विचार करें:",
+        "question_image": "",
+        "statements": [],
+        "pairs": [
+          [
+            {
+              "text": "संस्था",
+              "image": ""
+            },
+            {
+              "text": "भूमिका",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "भारतीय रिजर्व बैंक",
+              "image": ""
+            },
+            {
+              "text": "मौद्रिक नीति",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "सेबी",
+              "image": ""
+            },
+            {
+              "text": "प्रतिभूति बाजार विनियमन",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "यूपीएससी",
+              "image": ""
+            },
+            {
+              "text": "चुनाव कराता है",
+              "image": ""
+            }
+          ]
+        ],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कितने जोड़े सही सुमेलित हैं?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल एक",
+          "B": "सिर्फ दो",
+          "C": "तीनों",
+          "D": "कोई नहीं"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "जोड़ी 1: आरबीआई = मौद्रिक नीति = सही\nभारतीय रिज़र्व बैंक मौद्रिक नीति तैयार करने और लागू करने के लिए जिम्मेदार केंद्रीय बैंक है। रेपो दर, सीआरआर और ओएमओ जैसे उपकरणों के माध्यम से, यह तरलता को नियंत्रित करता है, मुद्रास्फीति को नियंत्रित करता है और वित्तीय स्थिरता बनाए रखता है। अतः, यह युग्म सही है।\nजोड़ी 2: सेबी = प्रतिभूति बाजार विनियमन = सही\nभारतीय प्रतिभूति और विनिमय बोर्ड स्टॉक एक्सचेंजों, दलालों और सूचीबद्ध कंपनियों सहित प्रतिभूति बाजार को नियंत्रित करता है। इसकी भूमिका निवेशकों के हितों की रक्षा करना, बाजार में पारदर्शिता सुनिश्चित करना और कदाचार को रोकना है। इसलिए, यह युग्म सही सुमेलित है।\nजोड़ी 3: यूपीएससी = चुनाव आयोजित करना = गलत\nसंघ लोक सेवा आयोग सिविल सेवा परीक्षा आयोजित करने और केंद्रीय सेवाओं में भर्ती के लिए जिम्मेदार है, न कि चुनाव के लिए। चुनाव भारत निर्वाचन आयोग द्वारा आयोजित किये जाते हैं। अतः यह युग्म गलत है।",
+        "solution_image": ""
+      }
     }
   ],
   "failed_translations": []
