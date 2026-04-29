@@ -2663,6 +2663,976 @@
         "solution": "कथन 1: यह नैनोस्केल =सही पर सामग्रियों से संबंधित है\nनैनोटेक्नोलॉजी में नैनोस्केल (आमतौर पर 1-100 नैनोमीटर) पर सामग्रियों का अध्ययन और हेरफेर शामिल है, जहां पदार्थ अद्वितीय भौतिक, रासायनिक और जैविक गुणों को प्रदर्शित करता है। इस पैमाने पर, सामग्री अलग-अलग व्यवहार कर सकती है (उदाहरण के लिए, बढ़ी हुई ताकत, प्रतिक्रियाशीलता, या चालकता), जिससे यह कथन मौलिक रूप से सही हो जाता है।\nकथन 2: इसका चिकित्सा और इलेक्ट्रॉनिक्स में अनुप्रयोग है =सही\nनैनोटेक्नोलॉजी के वास्तविक दुनिया में व्यापक अनुप्रयोग हैं:\n(1) चिकित्सा में, इसका उपयोग लक्षित दवा वितरण, कैंसर उपचार, निदान और नैनोमेडिसिन के लिए किया जाता है।\n(1) इलेक्ट्रॉनिक्स में, यह उपकरणों के लघुकरण, अर्धचालकों में सुधार और चिप्स और सेंसर के बेहतर प्रदर्शन को सक्षम बनाता है।\nइस प्रकार, यह कथन इसके बहुविषयक अनुप्रयोगों को सही ढंग से दर्शाता है।\nकथन 3: यह केवल प्रयोगशाला अनुसंधान तक ही सीमित है = ग़लत\nनैनोटेक्नोलॉजी प्रयोगशालाओं तक ही सीमित नहीं है; इसका उपयोग स्वास्थ्य देखभाल, इलेक्ट्रॉनिक्स, ऊर्जा, कपड़ा और पर्यावरण प्रबंधन जैसे उद्योगों में सक्रिय रूप से किया जाता है।\nवाक्यांश \"केवल\" कथन को अत्यधिक और गलत बनाता है।",
         "solution_image": ""
       }
+    },
+    {
+      "number": "29",
+      "subtopic": "Government Schemes",
+      "category": "concept",
+      "question_type": "statement",
+      "english": {
+        "number": "29",
+        "subtopic": "Government Schemes",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "Consider the following statements regarding Policy Implementation:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "It translates policy into action.",
+            "image": ""
+          },
+          {
+            "text": "It involves multiple stakeholders.",
+            "image": ""
+          },
+          {
+            "text": "It requires administrative capacity.",
+            "image": ""
+          },
+          {
+            "text": "It guarantees policy success always.",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "Which of the statements given above are correct?",
+          "image": ""
+        },
+        "options": {
+          "A": "1 and 2 only",
+          "B": "2 and 3 only",
+          "C": "1, 2 and 3 only",
+          "D": "All four"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "c",
+        "solution": "Statement 1: It translates policy into action =Correct\nPolicy implementation is the stage where formulated policies are executed through programs, schemes, and administrative actions. It converts legislative or executive decisions into ground-level outcomes. Without effective implementation, even well-designed policies fail to achieve their objectives. Hence, this statement correctly defines the concept.\nStatement 2: It involves multiple stakeholders =Correct\nPolicy implementation typically involves multiple actors, including government departments, local authorities, private sector entities, civil society organizations, and beneficiaries. Coordination among these stakeholders is essential for effective delivery and impact, making this statement correct.\nStatement 3: It requires administrative capacity =Correct\nSuccessful implementation depends on administrative capacity, including trained personnel, institutional strength, financial resources, and efficient governance mechanisms. Weak capacity can lead to delays, inefficiency, or policy failure. Therefore, this statement is correct.\nStatement 4: It guarantees policy success always = Incorrect\nPolicy implementation does not guarantee success. Outcomes depend on factors such as execution efficiency, stakeholder coordination, resource availability, and external conditions.\nThe word “always” makes the statement absolute and incorrect.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "29",
+        "subtopic": "Government Schemes",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "नीति कार्यान्वयन के संबंध में निम्नलिखित कथनों पर विचार करें:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "यह नीति को कार्य में परिणत करता है।",
+            "image": ""
+          },
+          {
+            "text": "इसमें कई हितधारक शामिल हैं।",
+            "image": ""
+          },
+          {
+            "text": "इसके लिए प्रशासनिक क्षमता की आवश्यकता है.",
+            "image": ""
+          },
+          {
+            "text": "यह हमेशा नीति की सफलता की गारंटी देता है।",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कथनों में से कौन सा सही है?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल 1 और 2",
+          "B": "केवल 2 और 3",
+          "C": "केवल 1, 2 और 3",
+          "D": "चारों"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "c",
+        "solution": "कथन 1: यह नीति को क्रियान्वित करता है=सही\nनीति कार्यान्वयन वह चरण है जहां तैयार की गई नीतियों को कार्यक्रमों, योजनाओं और प्रशासनिक कार्यों के माध्यम से क्रियान्वित किया जाता है। यह विधायी या कार्यकारी निर्णयों को जमीनी स्तर के परिणामों में परिवर्तित करता है। प्रभावी कार्यान्वयन के बिना, अच्छी तरह से डिज़ाइन की गई नीतियां भी अपने उद्देश्यों को प्राप्त करने में विफल रहती हैं। इसलिए, यह कथन अवधारणा को सही ढंग से परिभाषित करता है।\nकथन 2: इसमें कई हितधारक शामिल हैं =सही\nनीति कार्यान्वयन में आम तौर पर सरकारी विभाग, स्थानीय प्राधिकरण, निजी क्षेत्र की संस्थाएं, नागरिक समाज संगठन और लाभार्थी सहित कई कलाकार शामिल होते हैं। प्रभावी वितरण और प्रभाव के लिए इन हितधारकों के बीच समन्वय आवश्यक है, जो इस कथन को सही बनाता है।\nकथन 3: इसके लिए प्रशासनिक क्षमता की आवश्यकता है =सही\nसफल कार्यान्वयन प्रशिक्षित कर्मियों, संस्थागत ताकत, वित्तीय संसाधनों और कुशल शासन तंत्र सहित प्रशासनिक क्षमता पर निर्भर करता है। कमजोर क्षमता से देरी, अक्षमता या नीति विफलता हो सकती है। अत: यह कथन सत्य है।\nकथन 4: यह हमेशा नीति की सफलता की गारंटी देता है = गलत\nनीति कार्यान्वयन सफलता की गारंटी नहीं देता. परिणाम निष्पादन दक्षता, हितधारक समन्वय, संसाधन उपलब्धता और बाहरी स्थितियों जैसे कारकों पर निर्भर करते हैं।\nशब्द \"हमेशा\" कथन को पूर्ण और गलत बनाता है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "30",
+      "subtopic": "Government Schemes",
+      "category": "concept",
+      "question_type": "pair",
+      "english": {
+        "number": "30",
+        "subtopic": "Government Schemes",
+        "category": "concept",
+        "question_type": "pair",
+        "question": "Consider the following pairs:",
+        "question_image": "",
+        "statements": [],
+        "pairs": [
+          [
+            {
+              "text": "Concept",
+              "image": ""
+            },
+            {
+              "text": "Explanation",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "Policy Formulation",
+              "image": ""
+            },
+            {
+              "text": "Designing policies",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "Policy Implementation",
+              "image": ""
+            },
+            {
+              "text": "Executing policies",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "Policy Evaluation",
+              "image": ""
+            },
+            {
+              "text": "Ignoring outcomes",
+              "image": ""
+            }
+          ]
+        ],
+        "lastQuestion": {
+          "text": "How many pairs given above are correctly matched?",
+          "image": ""
+        },
+        "options": {
+          "A": "Only one",
+          "B": "Only two",
+          "C": "All three",
+          "D": "None"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "Pair 1: Policy Formulation =Designing policies =Correct\nPolicy formulation is the stage where problems are identified and Solution:s are designed in the form of policies. It involves analysis, consultation, and decision-making by policymakers to create a structured plan of action. Hence, describing it as “designing policies” is accurate.\nPair 2: Policy Implementation =Executing policies =Correct\nPolicy implementation refers to the process of putting policies into action through administrative machinery, programs, and schemes. It translates policy decisions into real-world outcomes, making this pairing correct.\nPair 3: Policy Evaluation =Ignoring outcomes = Incorrect\nThis is conceptually incorrect. Policy evaluation involves assessing the effectiveness, efficiency, and impact of a policy after implementation. It focuses on analyzing outcomes, identifying gaps, and suggesting improvements.\nThe phrase “ignoring outcomes” is the opposite of evaluation, making this pair wrong.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "30",
+        "subtopic": "Government Schemes",
+        "category": "concept",
+        "question_type": "pair",
+        "question": "निम्नलिखित जोड़ियों पर विचार करें:",
+        "question_image": "",
+        "statements": [],
+        "pairs": [
+          [
+            {
+              "text": "अवधारणा",
+              "image": ""
+            },
+            {
+              "text": "स्पष्टीकरण",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "नीति निर्धारण",
+              "image": ""
+            },
+            {
+              "text": "नीतियां डिजाइन करना",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "नीति का कार्यान्वयन",
+              "image": ""
+            },
+            {
+              "text": "नीतियों का क्रियान्वयन",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "नीति मूल्यांकन",
+              "image": ""
+            },
+            {
+              "text": "परिणामों की अनदेखी",
+              "image": ""
+            }
+          ]
+        ],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कितने जोड़े सही सुमेलित हैं?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल एक",
+          "B": "सिर्फ दो",
+          "C": "तीनों",
+          "D": "कोई नहीं"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "जोड़ी 1: नीति निर्माण = नीतियां डिजाइन करना = सही\nनीति निर्माण वह चरण है जहां समस्याओं की पहचान की जाती है और नीतियों के रूप में समाधान तैयार किए जाते हैं। इसमें कार्रवाई की एक संरचित योजना बनाने के लिए नीति निर्माताओं द्वारा विश्लेषण, परामर्श और निर्णय लेना शामिल है। इसलिए, इसे \"डिजाइनिंग नीतियों\" के रूप में वर्णित करना सटीक है।\nजोड़ी 2: नीति कार्यान्वयन = नीतियों का क्रियान्वयन = सही\nनीति कार्यान्वयन से तात्पर्य प्रशासनिक मशीनरी, कार्यक्रमों और योजनाओं के माध्यम से नीतियों को क्रियान्वित करने की प्रक्रिया से है। यह नीतिगत निर्णयों को वास्तविक दुनिया के परिणामों में परिवर्तित करता है, जिससे यह जोड़ी सही बनती है।\nजोड़ी 3: नीति मूल्यांकन = परिणामों की अनदेखी = गलत\nयह वैचारिक रूप से ग़लत है. नीति मूल्यांकन में कार्यान्वयन के बाद नीति की प्रभावशीलता, दक्षता और प्रभाव का आकलन करना शामिल है। यह परिणामों का विश्लेषण करने, कमियों की पहचान करने और सुधार का सुझाव देने पर केंद्रित है।\nवाक्यांश \"परिणामों की अनदेखी\" मूल्यांकन के विपरीत है, जो इस जोड़ी को गलत बनाता है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "31",
+      "subtopic": "Macro Fundamentals, GDP, Investment, Growth",
+      "category": "concept",
+      "question_type": "normal",
+      "english": {
+        "number": "31",
+        "subtopic": "Macro Fundamentals, GDP, Investment, Growth",
+        "category": "concept",
+        "question_type": "normal",
+        "question": "Which of the following best explains the concept of “Liquidity Trap” in macroeconomics?",
+        "question_image": "",
+        "statements": [],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "",
+          "image": ""
+        },
+        "options": {
+          "A": "High interest rates discourage borrowing",
+          "B": "Monetary policy becomes ineffective as interest rates are very low",
+          "C": "Inflation rises rapidly due to excess liquidity",
+          "D": "Government controls money supply directly"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "(a) High interest rates discourage borrowing = Incorrect\nThis describes a typical contractionary monetary situation where borrowing falls due to high interest rates. However, a liquidity trap occurs at the opposite extreme—very low interest rates, making this option incorrect.\n(b) Monetary policy becomes ineffective as interest rates are very low =Correct\nA liquidity trap is a situation in macroeconomics where interest rates are extremely low (close to zero) and people prefer to hold cash instead of investing or lending.\nIn such a scenario, even if the central bank (e.g., Reserve Bank of India) increases money supply, it fails to stimulate investment or consumption, rendering monetary policy ineffective.\nThis situation often occurs during deep recessions or economic stagnation, where confidence is low and demand remains weak despite easy monetary conditions.\n(c) Inflation rises rapidly due to excess liquidity = Incorrect\nA liquidity trap is usually associated with low inflation or even deflation, not high inflation.\n(d) Government controls money supply directly = Incorrect\nWhile central banks influence money supply, this option does not explain the concept of liquidity trap.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "31",
+        "subtopic": "Macro Fundamentals, GDP, Investment, Growth",
+        "category": "concept",
+        "question_type": "normal",
+        "question": "निम्नलिखित में से कौन व्यापक अर्थशास्त्र में \"तरलता जाल\" की अवधारणा को सबसे अच्छी तरह से समझाता है?",
+        "question_image": "",
+        "statements": [],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "",
+          "image": ""
+        },
+        "options": {
+          "A": "उच्च ब्याज दरें उधार लेने को हतोत्साहित करती हैं",
+          "B": "ब्याज दरें बहुत कम होने से मौद्रिक नीति अप्रभावी हो जाती है",
+          "C": "तरलता की अधिकता के कारण मुद्रास्फीति तेजी से बढ़ती है",
+          "D": "सरकार धन आपूर्ति को सीधे नियंत्रित करती है"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "(ए) उच्च ब्याज दरें उधार लेने को हतोत्साहित करती हैं = गलत\nयह एक विशिष्ट संकुचनकारी मौद्रिक स्थिति का वर्णन करता है जहां उच्च ब्याज दरों के कारण उधार लेना कम हो जाता है। हालाँकि, एक तरलता जाल विपरीत चरम पर होता है - बहुत कम ब्याज दरें, जिससे यह विकल्प गलत हो जाता है।\n(बी) ब्याज दरें बहुत कम होने के कारण मौद्रिक नीति अप्रभावी हो जाती है =सही\nतरलता जाल व्यापक अर्थशास्त्र में एक ऐसी स्थिति है जहां ब्याज दरें बेहद कम (शून्य के करीब) होती हैं और लोग निवेश या उधार देने के बजाय नकदी रखना पसंद करते हैं।\nऐसे परिदृश्य में, भले ही केंद्रीय बैंक (उदाहरण के लिए, भारतीय रिजर्व बैंक) धन आपूर्ति बढ़ाता है, यह निवेश या उपभोग को प्रोत्साहित करने में विफल रहता है, जिससे मौद्रिक नीति अप्रभावी हो जाती है।\nयह स्थिति अक्सर गहरी मंदी या आर्थिक ठहराव के दौरान होती है, जहां आत्मविश्वास कम होता है और आसान मौद्रिक स्थितियों के बावजूद मांग कमजोर रहती है।\n(सी) तरलता की अधिकता के कारण मुद्रास्फीति तेजी से बढ़ती है = गलत\nतरलता जाल आम तौर पर कम मुद्रास्फीति या यहां तक कि अपस्फीति से जुड़ा होता है, न कि उच्च मुद्रास्फीति से।\n(डी) सरकार धन आपूर्ति को सीधे नियंत्रित करती है = गलत\nजबकि केंद्रीय बैंक धन आपूर्ति को प्रभावित करते हैं, यह विकल्प तरलता जाल की अवधारणा को स्पष्ट नहीं करता है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "32",
+      "subtopic": "Money, Banking And Financial Institutions",
+      "category": "concept",
+      "question_type": "statement",
+      "english": {
+        "number": "32",
+        "subtopic": "Money, Banking And Financial Institutions",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "Consider the following statements regarding Repo Rate:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "It is the rate at which RBI lends to commercial banks.",
+            "image": ""
+          },
+          {
+            "text": "Increase in repo rate generally reduces inflation.",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "Which of the statements given above is/are correct?",
+          "image": ""
+        },
+        "options": {
+          "A": "1 only",
+          "B": "2 only",
+          "C": "Both 1 and 2",
+          "D": "Neither 1 nor 2"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "c",
+        "solution": "Statement 1: It is the rate at which RBI lends to commercial banks =Correct\nThe Repo Rate is the interest rate at which the Reserve Bank of India lends short-term funds to commercial banks against government securities. It is a key monetary policy instrument used to manage liquidity in the banking system. When banks face short-term liquidity shortages, they borrow from RBI at the repo rate, making this statement correct.\nStatement 2: Increase in repo rate generally reduces inflation =Correct\nAn increase in the repo rate makes borrowing more expensive for banks, which in turn leads to higher lending rates for businesses and consumers. This reduces demand for credit, slows down spending and investment, and ultimately helps control inflationary pressures in the economy.\nThus, repo rate hikes are typically used as a contractionary monetary policy tool to curb inflation.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "32",
+        "subtopic": "Money, Banking And Financial Institutions",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "रेपो रेट के संबंध में निम्नलिखित कथनों पर विचार करें:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "यह वह दर है जिस पर आरबीआई वाणिज्यिक बैंकों को ऋण देता है।",
+            "image": ""
+          },
+          {
+            "text": "रेपो रेट बढ़ने से आम तौर पर महंगाई कम होती है.",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल 1",
+          "B": "केवल 2",
+          "C": "1 और 2 दोनों",
+          "D": "न 1 न 2"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "c",
+        "solution": "कथन 1: यह वह दर है जिस पर आरबीआई वाणिज्यिक बैंकों को ऋण देता है =सही\nरेपो दर वह ब्याज दर है जिस पर भारतीय रिज़र्व बैंक सरकारी प्रतिभूतियों के बदले वाणिज्यिक बैंकों को अल्पकालिक धन उधार देता है। यह बैंकिंग प्रणाली में तरलता का प्रबंधन करने के लिए उपयोग किया जाने वाला एक प्रमुख मौद्रिक नीति उपकरण है। जब बैंकों को अल्पकालिक तरलता की कमी का सामना करना पड़ता है, तो वे आरबीआई से रेपो दर पर उधार लेते हैं, जिससे यह कथन सही हो जाता है।\nकथन 2: रेपो दर में वृद्धि आम तौर पर मुद्रास्फीति को कम करती है =सही\nरेपो दर में वृद्धि से बैंकों के लिए उधार लेना अधिक महंगा हो जाता है, जिसके परिणामस्वरूप व्यवसायों और उपभोक्ताओं के लिए उधार दरें बढ़ जाती हैं। इससे ऋण की मांग कम हो जाती है, खर्च और निवेश धीमा हो जाता है और अंततः अर्थव्यवस्था में मुद्रास्फीति के दबाव को नियंत्रित करने में मदद मिलती है।\nइस प्रकार, रेपो दर में बढ़ोतरी का उपयोग आम तौर पर मुद्रास्फीति पर अंकुश लगाने के लिए एक संकुचनकारी मौद्रिक नीति उपकरण के रूप में किया जाता है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "33",
+      "subtopic": "International Trade",
+      "category": "concept",
+      "question_type": "statement",
+      "english": {
+        "number": "33",
+        "subtopic": "International Trade",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "Consider the following statements regarding Balance of Trade:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "It refers to difference between exports and imports of goods.",
+            "image": ""
+          },
+          {
+            "text": "It is part of current account of Balance of Payments.",
+            "image": ""
+          },
+          {
+            "text": "It includes services trade.",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "Which of the statements given above are correct?",
+          "image": ""
+        },
+        "options": {
+          "A": "1 only",
+          "B": "1 and 2 only",
+          "C": "2 and 3 only",
+          "D": "All three"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "Statement 1: It refers to difference between exports and imports of goods =Correct\nThe Balance of Trade (BoT) measures the difference between a country’s exports and imports of goods (visible trade) over a given period. If exports exceed imports, it results in a trade surplus; if imports exceed exports, it leads to a trade deficit. This is the standard definition, making the statement correct.\nStatement 2: It is part of current account of Balance of Payments =Correct\nThe BoT forms a key component of the current account in the Balance of Payments (BoP). The current account includes trade in goods (BoT), trade in services, income flows, and transfers. Therefore, BoT is a subset of the broader current account, making this statement correct.\nStatement 3: It includes services trade = Incorrect\nBoT is limited only to goods (visible items) and does not include services. Trade in services (like IT services, tourism, etc.) is recorded separately under invisible trade in the current account.\nThus, including services within BoT is incorrect.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "33",
+        "subtopic": "International Trade",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "व्यापार संतुलन के संबंध में निम्नलिखित कथनों पर विचार करें:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "यह वस्तुओं के निर्यात और आयात के बीच अंतर को संदर्भित करता है।",
+            "image": ""
+          },
+          {
+            "text": "यह भुगतान संतुलन के चालू खाते का हिस्सा है।",
+            "image": ""
+          },
+          {
+            "text": "इसमें सेवा व्यापार शामिल है।",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कथनों में से कौन सा सही है?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल 1",
+          "B": "केवल 1 और 2",
+          "C": "केवल 2 और 3",
+          "D": "तीनों"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "कथन 1: यह माल के निर्यात और आयात के बीच अंतर को संदर्भित करता है = सही\nव्यापार संतुलन (बीओटी) एक निश्चित अवधि में किसी देश के निर्यात और माल के आयात (दृश्यमान व्यापार) के बीच अंतर को मापता है। यदि निर्यात आयात से अधिक हो जाता है, तो इसका परिणाम व्यापार अधिशेष होता है; यदि आयात निर्यात से अधिक हो जाता है, तो इससे व्यापार घाटा होता है। यह मानक परिभाषा है, जो कथन को सही बनाती है।\nकथन 2: यह भुगतान संतुलन के चालू खाते का हिस्सा है = सही\nबीओटी भुगतान संतुलन (बीओपी) में चालू खाते का एक प्रमुख घटक है। चालू खाते में माल में व्यापार (बीओटी), सेवाओं में व्यापार, आय प्रवाह और हस्तांतरण शामिल हैं। इसलिए, बीओटी व्यापक चालू खाते का एक उपसमूह है, जो इस कथन को सही बनाता है।\nकथन 3: इसमें सेवा व्यापार शामिल है = ग़लत\nBoT केवल वस्तुओं (दृश्यमान वस्तुओं) तक ही सीमित है और इसमें सेवाएँ शामिल नहीं हैं। सेवाओं में व्यापार (जैसे आईटी सेवाएं, पर्यटन, आदि) को चालू खाते में अदृश्य व्यापार के तहत अलग से दर्ज किया जाता है।\nइस प्रकार, बीओटी के भीतर सेवाओं को शामिल करना गलत है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "34",
+      "subtopic": "International Trade",
+      "category": "concept",
+      "question_type": "statement",
+      "english": {
+        "number": "34",
+        "subtopic": "International Trade",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "Consider the following statements regarding Exchange Rate Regimes:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "Fixed exchange rate is determined by government.",
+            "image": ""
+          },
+          {
+            "text": "Floating exchange rate is determined by market forces.",
+            "image": ""
+          },
+          {
+            "text": "Managed float involves intervention by central bank.",
+            "image": ""
+          },
+          {
+            "text": "Exchange rates remain constant in all systems.",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "Which of the statements given above are correct?",
+          "image": ""
+        },
+        "options": {
+          "A": "1 and 2 only",
+          "B": "2 and 3 only",
+          "C": "1, 2 and 3 only",
+          "D": "All four"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "c",
+        "solution": "Statement 1: Fixed exchange rate is determined by government =Correct\nIn a fixed exchange rate regime, the value of a country’s currency is pegged to another currency (like USD) or a basket of currencies, and the rate is determined and maintained by the government or central bank (e.g., Reserve Bank of India).\nThe central bank intervenes in the foreign exchange market to maintain stability, making this statement correct.\nStatement 2: Floating exchange rate is determined by market forces =Correct\nIn a floating exchange rate system, the value of the currency is determined by demand and supply of foreign exchange in the market. Factors like trade flows, capital movements, inflation, and interest rates influence the exchange rate.\nThere is minimal or no direct intervention, making this statement correct.\nStatement 3: Managed float involves intervention by central bank =Correct\nA managed float (dirty float) is a hybrid system where exchange rates are largely market-determined, but the central bank intervenes occasionally to prevent excessive volatility or stabilize the currency.\nThis is the system followed by India, making the statement correct.\nStatement 4: Exchange rates remain constant in all systems = Incorrect\nExchange rates remain constant only in a fixed regime, not in floating or managed systems. In reality, most exchange rate systems involve some level of fluctuation.\nThe phrase “in all systems” is an extreme generalization, making this statement incorrect.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "34",
+        "subtopic": "International Trade",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "विनिमय दर व्यवस्थाओं के संबंध में निम्नलिखित कथनों पर विचार करें:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "स्थिर विनिमय दर सरकार द्वारा निर्धारित की जाती है।",
+            "image": ""
+          },
+          {
+            "text": "फ्लोटिंग विनिमय दर बाजार शक्तियों द्वारा निर्धारित होती है।",
+            "image": ""
+          },
+          {
+            "text": "प्रबंधित फ्लोट में केंद्रीय बैंक का हस्तक्षेप शामिल होता है।",
+            "image": ""
+          },
+          {
+            "text": "सभी प्रणालियों में विनिमय दरें स्थिर रहती हैं।",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कथनों में से कौन सा सही है?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल 1 और 2",
+          "B": "केवल 2 और 3",
+          "C": "केवल 1, 2 और 3",
+          "D": "चारों"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "c",
+        "solution": "कथन 1: निश्चित विनिमय दर सरकार द्वारा निर्धारित की जाती है =सही\nएक निश्चित विनिमय दर व्यवस्था में, किसी देश की मुद्रा का मूल्य किसी अन्य मुद्रा (जैसे यूएसडी) या मुद्राओं की एक टोकरी से जुड़ा होता है, और दर सरकार या केंद्रीय बैंक (जैसे, भारतीय रिजर्व बैंक) द्वारा निर्धारित और बनाए रखी जाती है।\nकेंद्रीय बैंक विदेशी मुद्रा बाजार में स्थिरता बनाए रखने के लिए हस्तक्षेप करता है, जिससे यह कथन सही हो जाता है।\nकथन 2: फ्लोटिंग विनिमय दर बाजार की शक्तियों द्वारा निर्धारित होती है =सही\nफ्लोटिंग विनिमय दर प्रणाली में, मुद्रा का मूल्य बाजार में विदेशी मुद्रा की मांग और आपूर्ति से निर्धारित होता है। व्यापार प्रवाह, पूंजी संचलन, मुद्रास्फीति और ब्याज दरें जैसे कारक विनिमय दर को प्रभावित करते हैं।\nइसमें न्यूनतम या कोई प्रत्यक्ष हस्तक्षेप नहीं है, जो इस कथन को सही बनाता है।\nकथन 3: प्रबंधित फ्लोट में केंद्रीय बैंक का हस्तक्षेप शामिल है =सही\nप्रबंधित फ्लोट (डर्टी फ्लोट) एक हाइब्रिड प्रणाली है जहां विनिमय दरें काफी हद तक बाजार द्वारा निर्धारित होती हैं, लेकिन केंद्रीय बैंक अत्यधिक अस्थिरता को रोकने या मुद्रा को स्थिर करने के लिए कभी-कभी हस्तक्षेप करता है।\nयह भारत द्वारा अपनाई गई प्रणाली है, जो कथन को सही बनाती है।\nकथन 4: विनिमय दरें सभी प्रणालियों में स्थिर रहती हैं = गलत\nविनिमय दरें केवल एक निश्चित व्यवस्था में स्थिर रहती हैं, फ्लोटिंग या प्रबंधित प्रणालियों में नहीं। वास्तव में, अधिकांश विनिमय दर प्रणालियों में कुछ स्तर का उतार-चढ़ाव शामिल होता है।\nवाक्यांश \"सभी प्रणालियों में\" एक अत्यधिक सामान्यीकरण है, जो इस कथन को गलत बनाता है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "35",
+      "subtopic": "International Trade",
+      "category": "concept",
+      "question_type": "pair",
+      "english": {
+        "number": "35",
+        "subtopic": "International Trade",
+        "category": "concept",
+        "question_type": "pair",
+        "question": "Consider the following pairs:",
+        "question_image": "",
+        "statements": [],
+        "pairs": [
+          [
+            {
+              "text": "Term",
+              "image": ""
+            },
+            {
+              "text": "Meaning",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "Devaluation",
+              "image": ""
+            },
+            {
+              "text": "Reduction in value of currency under fixed regime",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "Depreciation",
+              "image": ""
+            },
+            {
+              "text": "Fall in value of currency under market forces",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "Appreciation",
+              "image": ""
+            },
+            {
+              "text": "Decrease in currency value",
+              "image": ""
+            }
+          ]
+        ],
+        "lastQuestion": {
+          "text": "How many pairs given above are correctly matched?",
+          "image": ""
+        },
+        "options": {
+          "A": "Only one",
+          "B": "Only two",
+          "C": "All three",
+          "D": "None"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "Pair 1: Devaluation =Reduction in value of currency under fixed regime =Correct\nDevaluation refers to a deliberate downward adjustment in the value of a country’s currency by the government or central bank under a fixed exchange rate system. It is usually done to boost exports and correct trade imbalances. Hence, this definition is correct.\nPair 2: Depreciation =Fall in value of currency under market forces =Correct\nDepreciation occurs when the value of a currency falls due to demand and supply conditions in a floating exchange rate system. It is not controlled directly by the government but is influenced by factors like trade deficits, capital flows, and inflation. This makes the pair correctly matched.\nPair 3: Appreciation =Decrease in currency value = Incorrect\nAppreciation actually means an increase in the value of a currency relative to others, not a decrease. The given explanation is the opposite of the correct meaning, making this pair incorrect.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "35",
+        "subtopic": "International Trade",
+        "category": "concept",
+        "question_type": "pair",
+        "question": "निम्नलिखित जोड़ियों पर विचार करें:",
+        "question_image": "",
+        "statements": [],
+        "pairs": [
+          [
+            {
+              "text": "अवधि",
+              "image": ""
+            },
+            {
+              "text": "अर्थ",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "अवमूल्यन",
+              "image": ""
+            },
+            {
+              "text": "निश्चित व्यवस्था के अंतर्गत मुद्रा के मूल्य में कमी",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "मूल्यह्रास",
+              "image": ""
+            },
+            {
+              "text": "बाज़ार की शक्तियों के तहत मुद्रा के मूल्य में गिरावट",
+              "image": ""
+            }
+          ],
+          [
+            {
+              "text": "प्रशंसा",
+              "image": ""
+            },
+            {
+              "text": "मुद्रा मूल्य में कमी",
+              "image": ""
+            }
+          ]
+        ],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कितने जोड़े सही सुमेलित हैं?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल एक",
+          "B": "सिर्फ दो",
+          "C": "तीनों",
+          "D": "कोई नहीं"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "जोड़ी 1: अवमूल्यन =निश्चित शासन के तहत मुद्रा के मूल्य में कमी =सही\nअवमूल्यन का तात्पर्य एक निश्चित विनिमय दर प्रणाली के तहत सरकार या केंद्रीय बैंक द्वारा किसी देश की मुद्रा के मूल्य में जानबूझकर नीचे की ओर समायोजन करना है। यह आमतौर पर निर्यात को बढ़ावा देने और व्यापार असंतुलन को ठीक करने के लिए किया जाता है। अत: यह परिभाषा सही है।\nजोड़ी 2: मूल्यह्रास = बाजार की ताकतों के तहत मुद्रा के मूल्य में गिरावट = सही\nमूल्यह्रास तब होता है जब फ्लोटिंग विनिमय दर प्रणाली में मांग और आपूर्ति की स्थिति के कारण मुद्रा का मूल्य गिर जाता है। यह सीधे सरकार द्वारा नियंत्रित नहीं होता है बल्कि व्यापार घाटे, पूंजी प्रवाह और मुद्रास्फीति जैसे कारकों से प्रभावित होता है। इससे युग्म सही सुमेलित हो जाता है।\nजोड़ी 3: प्रशंसा = मुद्रा मूल्य में कमी = गलत\nवास्तव में प्रशंसा का अर्थ किसी मुद्रा के मूल्य में अन्य की तुलना में वृद्धि है, कमी नहीं। दी गई व्याख्या सही अर्थ के विपरीत है, जिससे यह जोड़ी ग़लत हो गई है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "36",
+      "subtopic": "Ocean And Its Movement",
+      "category": "concept",
+      "question_type": "normal",
+      "english": {
+        "number": "36",
+        "subtopic": "Ocean And Its Movement",
+        "category": "concept",
+        "question_type": "normal",
+        "question": "Which of the following best explains the concept of “Thermohaline Circulation”?",
+        "question_image": "",
+        "statements": [],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "",
+          "image": ""
+        },
+        "options": {
+          "A": "Atmospheric wind circulation",
+          "B": "Ocean circulation driven by temperature and salinity differences",
+          "C": "Heat transfer in land masses",
+          "D": "Movement of glaciers"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "(a) Atmospheric wind circulation = Incorrect\nThis refers to the movement of air masses in the atmosphere (like trade winds, westerlies), not oceanic processes. Hence, it is unrelated to thermohaline circulation.\n(b) Ocean circulation driven by temperature and salinity differences =Correct\nThermohaline circulation is a global system of deep-ocean currents driven by variations in temperature (thermo) and salinity (haline).\nCold, salty water is denser and sinks in polar regions, while warmer, less saline water rises elsewhere, creating a continuous global conveyor belt of ocean currents.\nThis circulation plays a crucial role in regulating Earth’s climate, redistributing heat across the planet, and influencing weather patterns.\n(c) Heat transfer in land masses = Incorrect\nThis refers to terrestrial heat processes, not oceanic circulation.\n(d) Movement of glaciers = Incorrect\nGlacier movement is a cryospheric process, unrelated to thermohaline circulation.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "36",
+        "subtopic": "Ocean And Its Movement",
+        "category": "concept",
+        "question_type": "normal",
+        "question": "निम्नलिखित में से कौन \"थर्मोहेलिन सर्कुलेशन\" की अवधारणा को सबसे अच्छी तरह से समझाता है?",
+        "question_image": "",
+        "statements": [],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "",
+          "image": ""
+        },
+        "options": {
+          "A": "वायुमंडलीय पवन परिसंचरण",
+          "B": "महासागरीय परिसंचरण तापमान और लवणता के अंतर से संचालित होता है",
+          "C": "भूमि द्रव्यमान में ऊष्मा स्थानांतरण",
+          "D": "ग्लेशियरों का हिलना"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "(ए) वायुमंडलीय पवन परिसंचरण = गलत\nयह वायुमंडल में वायुराशियों की गति (जैसे व्यापारिक पवनें, पछुआ हवाएँ) को संदर्भित करता है, न कि समुद्री प्रक्रियाओं को। इसलिए, यह थर्मोहेलिन परिसंचरण से असंबंधित है।\n(बी) तापमान और लवणता के अंतर से संचालित महासागर परिसंचरण = सही\nथर्मोहेलिन परिसंचरण तापमान (थर्मो) और लवणता (हैलाइन) में भिन्नता से संचालित गहरे समुद्र की धाराओं की एक वैश्विक प्रणाली है।\nठंडा, खारा पानी सघन होता है और ध्रुवीय क्षेत्रों में डूब जाता है, जबकि गर्म, कम खारा पानी अन्य जगहों पर ऊपर उठता है, जिससे समुद्री धाराओं का एक सतत वैश्विक कन्वेयर बेल्ट बनता है।\nयह परिसंचरण पृथ्वी की जलवायु को विनियमित करने, पूरे ग्रह पर गर्मी का पुनर्वितरण करने और मौसम के पैटर्न को प्रभावित करने में महत्वपूर्ण भूमिका निभाता है।\n(सी) भूमि द्रव्यमान में गर्मी हस्तांतरण = गलत\nयह स्थलीय ताप प्रक्रियाओं को संदर्भित करता है, समुद्री परिसंचरण को नहीं।\n(डी) ग्लेशियरों का हिलना = गलत\nग्लेशियर की गति एक क्रायोस्फेरिक प्रक्रिया है, जो थर्मोहेलिन परिसंचरण से असंबंधित है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "37",
+      "subtopic": "Biodiversity And Its Conservation",
+      "category": "concept",
+      "question_type": "statement",
+      "english": {
+        "number": "37",
+        "subtopic": "Biodiversity And Its Conservation",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "Consider the following statements regarding Biodiversity:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "It includes genetic, species, and ecosystem diversity.",
+            "image": ""
+          },
+          {
+            "text": "Loss of biodiversity has no impact on ecosystem stability.",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "Which of the statements given above is/are correct?",
+          "image": ""
+        },
+        "options": {
+          "A": "1 only",
+          "B": "2 only",
+          "C": "Both 1 and 2",
+          "D": "Neither 1 nor 2"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "a",
+        "solution": "Statement 1: It includes genetic, species, and ecosystem diversity =Correct\nBiodiversity refers to the variety of life at multiple levels, including:\n(1) Genetic diversity (variation within species),\n(1) Species diversity (variety of species), and\n(1) Ecosystem diversity (variety of ecosystems like forests, wetlands, oceans).\nThis is the standard scientific classification, making the statement correct.\nStatement 2: Loss of biodiversity has no impact on ecosystem stability = Incorrect\nLoss of biodiversity significantly affects ecosystem stability and resilience. Diverse ecosystems are more capable of withstanding environmental stresses, diseases, and climate change.\nReduction in biodiversity can disrupt food chains, reduce productivity, and weaken ecosystem services like pollination, water purification, and climate regulation.\nThe phrase “no impact” is an extreme statement and clearly incorrect.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "37",
+        "subtopic": "Biodiversity And Its Conservation",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "जैव विविधता के संबंध में निम्नलिखित कथनों पर विचार करें:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "इसमें आनुवंशिक, प्रजाति और पारिस्थितिकी तंत्र विविधता शामिल है।",
+            "image": ""
+          },
+          {
+            "text": "जैव विविधता के नुकसान का पारिस्थितिकी तंत्र स्थिरता पर कोई प्रभाव नहीं पड़ता है।",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल 1",
+          "B": "केवल 2",
+          "C": "1 और 2 दोनों",
+          "D": "न 1 न 2"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "a",
+        "solution": "कथन 1: इसमें आनुवंशिक, प्रजाति और पारिस्थितिकी तंत्र विविधता शामिल है =सही\nजैव विविधता कई स्तरों पर जीवन की विविधता को संदर्भित करती है, जिनमें शामिल हैं:\n(1) आनुवंशिक विविधता (प्रजातियों के भीतर भिन्नता),\n(1) प्रजाति विविधता (प्रजातियों की विविधता), और\n(1) पारिस्थितिकी तंत्र विविधता (जंगल, आर्द्रभूमि, महासागर जैसे पारिस्थितिक तंत्र की विविधता)।\nयह मानक वैज्ञानिक वर्गीकरण है, जो कथन को सही बनाता है।\nकथन 2: जैव विविधता के नुकसान का पारिस्थितिकी तंत्र स्थिरता पर कोई प्रभाव नहीं पड़ता = गलत\nजैव विविधता का नुकसान पारिस्थितिकी तंत्र की स्थिरता और लचीलेपन को महत्वपूर्ण रूप से प्रभावित करता है। विविध पारिस्थितिकी तंत्र पर्यावरणीय तनाव, बीमारियों और जलवायु परिवर्तन को झेलने में अधिक सक्षम हैं।\nजैव विविधता में कमी से खाद्य श्रृंखला बाधित हो सकती है, उत्पादकता कम हो सकती है और परागण, जल शुद्धिकरण और जलवायु विनियमन जैसी पारिस्थितिकी तंत्र सेवाएं कमजोर हो सकती हैं।\nवाक्यांश \"कोई प्रभाव नहीं\" एक अतिवादी कथन है और स्पष्ट रूप से गलत है।",
+        "solution_image": ""
+      }
+    },
+    {
+      "number": "38",
+      "subtopic": "Science & Tech Miscellaneous",
+      "category": "concept",
+      "question_type": "statement",
+      "english": {
+        "number": "38",
+        "subtopic": "Science & Tech Miscellaneous",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "Consider the following statements regarding Artificial Intelligence Ethics:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "It addresses fairness and bias in algorithms.",
+            "image": ""
+          },
+          {
+            "text": "It ensures accountability in AI systems.",
+            "image": ""
+          },
+          {
+            "text": "It eliminates need for human oversight completely.",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "Which of the statements given above are correct?",
+          "image": ""
+        },
+        "options": {
+          "A": "1 only",
+          "B": "1 and 2 only",
+          "C": "2 and 3 only",
+          "D": "All three"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "Statement 1: It addresses fairness and bias in algorithms =Correct\nAI Ethics focuses on ensuring that artificial intelligence systems operate in a fair and unbiased manner. Algorithms trained on biased data can produce discriminatory outcomes, so ethical frameworks aim to detect, mitigate, and prevent bias. This is a core principle in responsible AI development, making the statement correct.\nStatement 2: It ensures accountability in AI systems =Correct\nAI Ethics also emphasizes accountability, meaning that developers, organizations, and users must be responsible for the outcomes of AI systems. Mechanisms such as auditability, transparency, and explainability are promoted to ensure that decisions made by AI can be traced and justified. Hence, this statement is correct.\nStatement 3: It eliminates need for human oversight completely = Incorrect\nAI Ethics does not eliminate human oversight; instead, it reinforces the need for human control and supervision over AI systems. Human-in-the-loop approaches are essential to prevent misuse, errors, and unintended consequences.\nThe phrase “completely eliminates” is an extreme statement, making it incorrect.",
+        "solution_image": "",
+        "status": "success"
+      },
+      "hindi": {
+        "number": "38",
+        "subtopic": "Science & Tech Miscellaneous",
+        "category": "concept",
+        "question_type": "statement",
+        "question": "आर्टिफिशियल इंटेलिजेंस एथिक्स के संबंध में निम्नलिखित कथनों पर विचार करें:",
+        "question_image": "",
+        "statements": [
+          {
+            "text": "यह एल्गोरिदम में निष्पक्षता और पूर्वाग्रह को संबोधित करता है।",
+            "image": ""
+          },
+          {
+            "text": "यह AI सिस्टम में जवाबदेही सुनिश्चित करता है।",
+            "image": ""
+          },
+          {
+            "text": "यह मानवीय निरीक्षण की आवश्यकता को पूरी तरह से समाप्त कर देता है।",
+            "image": ""
+          }
+        ],
+        "pairs": [],
+        "lastQuestion": {
+          "text": "ऊपर दिए गए कथनों में से कौन सा सही है?",
+          "image": ""
+        },
+        "options": {
+          "A": "केवल 1",
+          "B": "केवल 1 और 2",
+          "C": "केवल 2 और 3",
+          "D": "तीनों"
+        },
+        "options_images": {
+          "A": "",
+          "B": "",
+          "C": "",
+          "D": ""
+        },
+        "answer": "b",
+        "solution": "कथन 1: यह एल्गोरिदम में निष्पक्षता और पूर्वाग्रह को संबोधित करता है =सही\nएआई एथिक्स यह सुनिश्चित करने पर केंद्रित है कि कृत्रिम बुद्धिमत्ता प्रणाली निष्पक्ष और निष्पक्ष तरीके से काम करे। पक्षपातपूर्ण डेटा पर प्रशिक्षित एल्गोरिदम भेदभावपूर्ण परिणाम उत्पन्न कर सकते हैं, इसलिए नैतिक ढांचे का उद्देश्य पूर्वाग्रह का पता लगाना, कम करना और रोकना है। यह जिम्मेदार एआई विकास में एक मुख्य सिद्धांत है, जो कथन को सही बनाता है।\nकथन 2: यह एआई सिस्टम में जवाबदेही सुनिश्चित करता है =सही\nएआई एथिक्स जवाबदेही पर भी जोर देता है, जिसका अर्थ है कि डेवलपर्स, संगठनों और उपयोगकर्ताओं को एआई सिस्टम के परिणामों के लिए जिम्मेदार होना चाहिए। यह सुनिश्चित करने के लिए कि एआई द्वारा लिए गए निर्णयों का पता लगाया जा सके और उन्हें उचित ठहराया जा सके, ऑडिटेबिलिटी, पारदर्शिता और व्याख्यात्मकता जैसे तंत्रों को बढ़ावा दिया जाता है। अतः, यह कथन सही है।\nकथन 3: यह मानवीय निरीक्षण की आवश्यकता को पूरी तरह से समाप्त कर देता है = ग़लत\nएआई एथिक्स मानवीय निरीक्षण को खत्म नहीं करता है; इसके बजाय, यह एआई सिस्टम पर मानव नियंत्रण और पर्यवेक्षण की आवश्यकता को पुष्ट करता है। दुरुपयोग, त्रुटियों और अनपेक्षित परिणामों को रोकने के लिए ह्यूमन-इन-द-लूप दृष्टिकोण आवश्यक हैं।\nवाक्यांश \"पूरी तरह से समाप्त\" एक अतिवादी कथन है, जो इसे गलत बनाता है।",
+        "solution_image": ""
+      }
     }
   ],
   "failed_translations": []
