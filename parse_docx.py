@@ -27,6 +27,11 @@ def extract_field(text: str) -> dict:
         "image": image_path
     }
 
+def extract_all_images(text: str) -> list:
+    """Return all image paths found in the text, in document order."""
+    pattern = re.escape(IMG_START) + r"\s*(.*?)\s*" + re.escape(IMG_END)
+    return [m.group(1).strip() for m in re.finditer(pattern, text, re.I)]
+
 def parse_block_regex(text: str) -> dict | None:
     lines = [l.strip() for l in text.split('\n') if l.strip()]
     if len(lines) < 4: return None
@@ -47,6 +52,23 @@ def parse_block_regex(text: str) -> dict | None:
     category = meta[1].lower() if len(meta) > 1 else "aptitude"
     # Normalize question_type: lower case and replace spaces with hyphens (e.g., "Normal Csat" -> "normal-csat")
     question_type = meta[2].lower().strip().replace(" ", "-") if len(meta) > 2 else "normal"
+
+    # --- CSAT FIX: Capture any image lines that sit between the type-metadata
+    # line (q_idx - 1) and the actual question-number marker line (q_idx).
+    # These images ARE the question body for Normal-csat questions.
+    pre_question_image = ""
+    pre_question_image_hindi = ""
+    if len(meta) >= 3:
+        # Collect ALL image tokens from the metadata block (between type and question number).
+        # First image  = English question image.
+        # Second image = Hindi question image (for CSAT image-only questions).
+        img_pattern = re.escape(IMG_START) + r'\s*(.*?)\s*' + re.escape(IMG_END)
+        for ml in meta:
+            for m_img in re.finditer(img_pattern, ml, re.I):
+                if not pre_question_image:
+                    pre_question_image = m_img.group(1).strip()
+                elif not pre_question_image_hindi:
+                    pre_question_image_hindi = m_img.group(1).strip()
 
     i = q_idx
     question_lines = []
@@ -138,12 +160,48 @@ def parse_block_regex(text: str) -> dict | None:
     lastQuestion = ""
 
     if is_stmt_mode:
+        current_stmt_lines = []
+        stmt_raw_texts = []
+        
         while i < len(lines) and not is_options(i, lines[i]) and not is_ans(lines[i]) and not is_sol(lines[i]) and not re.search(lq_trigger, lines[i], re.I):
-            # Accept numbered (1. / 1)) OR un-numbered statement lines
-            # Strip markers like 1. or A. or (1)
-            text = re.sub(r'^(\d+|[A-Za-z])[\.\)]\s*|^\(\d+\)\s*|^\([A-Za-z]\)\s*', '', lines[i]).strip()
-            if text: statements.append(extract_field(text))
+            line = lines[i].strip()
+            if not line:
+                i += 1
+                continue
+                
+            temp_line = re.sub(r'^' + re.escape(IMG_START) + r'.*?' + re.escape(IMG_END) + r'\s*', '', line).strip()
+            is_new_stmt_marker = bool(re.match(r'^(\d+|[A-Za-z])[\.\)]|^\(\d+\)|^\([A-Za-z]\)', temp_line))
+            
+            if is_new_stmt_marker:
+                if current_stmt_lines:
+                    stmt_raw_texts.append('\n'.join(current_stmt_lines))
+                current_stmt_lines = []
+                
+                # Strip the marker to get the text of the line
+                cleaned_line = re.sub(r'^(\d+|[A-Za-z])[\.\)]\s*|^\(\d+\)\s*|^\([A-Za-z]\)\s*', '', temp_line).strip()
+                
+                # Restore leading image if present
+                m_img = re.match(r'^(' + re.escape(IMG_START) + r'.*?' + re.escape(IMG_END) + r'\s*)', line)
+                if m_img:
+                    current_stmt_lines.append(m_img.group(1).strip())
+                if cleaned_line:
+                    current_stmt_lines.append(cleaned_line)
+            else:
+                current_stmt_lines.append(line)
             i += 1
+            
+        if current_stmt_lines:
+            stmt_raw_texts.append('\n'.join(current_stmt_lines))
+            
+        for raw_text in stmt_raw_texts:
+            f = extract_field(raw_text)
+            all_imgs = extract_all_images(raw_text)
+            hi_img = all_imgs[1] if len(all_imgs) > 1 else ""
+            statements.append({
+                "text": f["text"],
+                "image": f["image"],
+                "image_hindi": hi_img
+            })
         lq_parts = []
         while i < len(lines) and not is_options(i, lines[i]) and not is_ans(lines[i]):
             lq_parts.append(lines[i])
@@ -158,7 +216,14 @@ def parse_block_regex(text: str) -> dict | None:
                 for p in parts:
                     # Strip markers like 1. or A. or (1)
                     clean_p = re.sub(r'^(\d+|[A-Za-z])[\.\)]\s*|^\(\d+\)\s*|^\([A-Za-z]\)\s*', '', p.strip()).strip()
-                    row.append(extract_field(clean_p))
+                    f = extract_field(clean_p)
+                    all_imgs = extract_all_images(clean_p)
+                    hi_img = all_imgs[1] if len(all_imgs) > 1 else ""
+                    row.append({
+                        "text": f["text"],
+                        "image": f["image"],
+                        "image_hindi": hi_img
+                    })
                 if len(row) >= 2: pairs.append(row)
             i += 1
         lq_parts = []
@@ -167,10 +232,23 @@ def parse_block_regex(text: str) -> dict | None:
             i += 1
         lastQuestion = extract_field(' '.join(lq_parts).strip())
     else:
-        # Normal type: question text already collected until options
+        # Normal type (including normal-csat): question text already collected until options.
+        # For normal-csat the question body is typically an image; nothing extra to do here.
         pass
 
-    question_field = extract_field('\n'.join(question_lines))
+    q_all_text = '\n'.join(question_lines)
+    question_field = extract_field(q_all_text)
+    q_all_images = extract_all_images(q_all_text)
+
+    # CSAT FIX: Images in the metadata block (before the question number) are the
+    # actual question body.  Promote them to question_image / question_image_hindi.
+    if pre_question_image and not question_field.get("image", ""):
+        question_field["image"] = pre_question_image
+        # Second metadata image → Hindi question image
+        question_image_hindi = pre_question_image_hindi
+    else:
+        # If images were inline in the question text, second one is the Hindi version
+        question_image_hindi = q_all_images[1] if len(q_all_images) > 1 else ""
 
     # Options
     options = {}
@@ -243,7 +321,11 @@ def parse_block_regex(text: str) -> dict | None:
                 i += 1
             break
         i += 1
-    solution_field = extract_field('\n'.join(solution_lines))
+    sol_all_text = '\n'.join(solution_lines)
+    solution_field = extract_field(sol_all_text)
+    sol_all_images = extract_all_images(sol_all_text)
+    # Second solution image (if present) is the Hindi version of the solution image
+    solution_image_hindi = sol_all_images[1] if len(sol_all_images) > 1 else ""
 
     return {
         "number": q_number,
@@ -252,6 +334,7 @@ def parse_block_regex(text: str) -> dict | None:
         "question_type": question_type,
         "question": question_field["text"],
         "question_image": question_field["image"],
+        "question_image_hindi": question_image_hindi,
         "statements": statements,
         "pairs": pairs,
         "lastQuestion": lastQuestion if isinstance(lastQuestion, dict) else {"text": lastQuestion, "image": ""},
@@ -259,43 +342,55 @@ def parse_block_regex(text: str) -> dict | None:
         "options_images": options_images,
         "answer": answer,
         "solution": solution_field["text"],
-        "solution_image": solution_field["image"]
+        "solution_image": solution_field["image"],
+        "solution_image_hindi": solution_image_hindi
     }
 
 def normalise(q: dict) -> dict | None:
-    # 1. Basic requirements for all types (Strictly text-based)
-    if not q["question"].strip(): return None
+    q_type = q["question_type"].lower()
+    is_csat = "csat" in q_type
+
+    # 1. Basic requirements for all types
+    # For CSAT: question can be image-only (text may be empty if image is present)
+    if not q["question"].strip() and not q.get("question_image", "").strip():
+        return None
+
     if len(q["options"]) < 4: return None
     # Ensure all 4 options have text
     if any(not str(val).strip() for val in q["options"].values()): return None
-    
+
     if not q["answer"].strip(): return None
-    if not q["solution"].strip(): return None
-    
-    # 2. Type-specific requirements (Strictly text-based)
-    q_type = q["question_type"].lower()
-    
-    if "statement" in q_type:
-        # Must have statements with text
+
+    # For CSAT: solution can be image-only (text may be empty if image is present)
+    if not q["solution"].strip() and not q.get("solution_image", "").strip():
+        return None
+
+    # 2. Type-specific requirements
+    if "statement" in q_type and not is_csat:
+        # Pure statement type: must have statements with text
         if not q["statements"]: return None
         if not all(s.get("text", "").strip() for s in q["statements"]): return None
-        
+
         lq = q.get("lastQuestion", {})
         if not lq.get("text", "").strip():
-            # Manually add default for Statement type
             q["lastQuestion"] = {"text": "Which of the statements is correct?", "image": ""}
-        
-    elif "pair" in q_type:
-        # Must have pairs with text in both columns
+
+    elif "statement" in q_type and is_csat:
+        # Statement-csat: question body is an image; statements list may be empty
+        lq = q.get("lastQuestion", {})
+        if not lq.get("text", "").strip() and not lq.get("image", "").strip():
+            q["lastQuestion"] = {"text": "", "image": ""}
+
+    elif "pair" in q_type and not is_csat:
+        # Pure pair type: must have pairs with text in both columns
         if not q["pairs"]: return None
         for row in q["pairs"]:
             if not all(cell.get("text", "").strip() for cell in row): return None
-            
+
         lq = q.get("lastQuestion", {})
         if not lq.get("text", "").strip():
-            # Manually add default for Pair type
             q["lastQuestion"] = {"text": "How many pairs are correctly matched?", "image": ""}
-        
+
     return q
 
 def parse_docx_file(file_path: str) -> list:
@@ -379,10 +474,15 @@ def parse_docx_file(file_path: str) -> list:
     triplet_starts = set()
 
     # 'Satement' (missing second 't') is a known typo in the English source doc
+    # CSAT variants: 'normal-csat', 'statement-csat' and their Hindi equivalents
     type_exact    = {"normal", "statement", "satement", "pair",
                      "normal ", "statement ", "satement ", "pair ",
-                     "सामान्य", "कथन", "जोड़ी"}
-    concept_exact = {"concept", "concept ", "कॉन्सेप्ट", "कॉन्सेप्ट "}
+                     "normal-csat", "statement-csat", "satement-csat", "pair-csat",
+                     "normal-csat ", "statement-csat ", "satement-csat ", "pair-csat ",
+                     "सामान्य", "कथन", "जोड़ी",
+                     "सामान्य-csat", "कथन-csat", "जोड़ी-csat"}
+    concept_exact = {"concept", "concept ", "aptitude", "aptitude ",
+                     "कॉन्सेप्ट", "कॉन्सेप्ट "}
 
     for j in range(1, len(lines)):
         l_j      = lines[j].lower().strip()
@@ -502,14 +602,28 @@ def merge_questions(en_qs: list, output_file: str = None, incremental_save: bool
         num = en_q["number"]
         print(f"[{idx+1}/{total}] Translating Question {num}...")
         
-        # Build Hindi side by translating English fields
+        # Build Hindi side by translating English fields.
+        # Rule:
+        #   - If text exists  → translate via deep_translator (images same for both sides)
+        #   - If no text, image-only → English side gets image 1, Hindi side gets image 2
+        has_q_text  = bool(en_q["question"].strip())
+        has_sol_text = bool(en_q["solution"].strip())
+
+        # Question image routing
+        q_img_hindi = en_q.get("question_image_hindi", "").strip()
+        hi_question_image = q_img_hindi if (not has_q_text and q_img_hindi) else en_q["question_image"]
+
+        # Solution image routing
+        sol_img_hindi = en_q.get("solution_image_hindi", "").strip()
+        hi_solution_image = sol_img_hindi if (not has_sol_text and sol_img_hindi) else en_q["solution_image"]
+
         hi_side = {
             "number": num,
             "subtopic": en_q["subtopic"],
             "category": en_q["category"],
             "question_type": en_q["question_type"],
             "question": translate_to_hindi(en_q["question"]),
-            "question_image": en_q["question_image"],
+            "question_image": hi_question_image,
             "statements": [],
             "pairs": [],
             "lastQuestion": {"text": "", "image": ""},
@@ -517,23 +631,31 @@ def merge_questions(en_qs: list, output_file: str = None, incremental_save: bool
             "options_images": en_q["options_images"],
             "answer": en_q["answer"],
             "solution": translate_to_hindi(en_q["solution"]),
-            "solution_image": en_q["solution_image"]
+            "solution_image": hi_solution_image
         }
 
         # Translate Statements
         for stat in en_q["statements"]:
+            stat_has_text = bool(stat.get("text", "").strip())
+            stat_img_hi = stat.get("image_hindi", "").strip()
+            hi_stat_img = stat_img_hi if (not stat_has_text and stat_img_hi) else stat.get("image", "")
+
             hi_side["statements"].append({
-                "text": translate_to_hindi(stat["text"]),
-                "image": stat["image"]
+                "text": translate_to_hindi(stat.get("text", "")),
+                "image": hi_stat_img
             })
 
         # Translate Pairs
         for row in en_q["pairs"]:
             hi_row = []
             for p_item in row:
+                p_has_text = bool(p_item.get("text", "").strip())
+                p_img_hi = p_item.get("image_hindi", "").strip()
+                hi_p_img = p_img_hi if (not p_has_text and p_img_hi) else p_item.get("image", "")
+
                 hi_row.append({
-                    "text": translate_to_hindi(p_item["text"]),
-                    "image": p_item["image"]
+                    "text": translate_to_hindi(p_item.get("text", "")),
+                    "image": hi_p_img
                 })
             hi_side["pairs"].append(hi_row)
 
@@ -546,13 +668,26 @@ def merge_questions(en_qs: list, output_file: str = None, incremental_save: bool
         for k, v in en_q["options"].items():
             hi_side["options"][k] = translate_to_hindi(v)
 
-        # Mark as partial if translation failed
-        if not hi_side["question"] or any(not opt for opt in hi_side["options"].values()):
+        # Mark as partial if translation failed.
+        # For image-only questions: no translated text is OK as long as we have an image.
+        q_ok  = bool(hi_side["question"]) or bool(hi_side["question_image"])
+        opts_ok = all(bool(opt) for opt in hi_side["options"].values())
+        if not q_ok or not opts_ok:
             en_q["status"] = "partial_translation"
             failed_translations.append({
                 "q_number": num,
                 "reason": "One or more fields failed to translate"
             })
+
+        # Strip internal routing-only fields before storing in the final output.
+        # These were only used to route the correct image to the Hindi side.
+        en_q.pop("question_image_hindi", None)
+        en_q.pop("solution_image_hindi", None)
+        for stat in en_q.get("statements", []):
+            stat.pop("image_hindi", None)
+        for row in en_q.get("pairs", []):
+            for p_item in row:
+                p_item.pop("image_hindi", None)
 
         merged.append({
             "number": num,
