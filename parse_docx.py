@@ -50,8 +50,11 @@ def parse_block_regex(text: str) -> dict | None:
     meta = lines[:q_idx]
     subtopic = meta[0] if len(meta) > 0 else "Unknown"
     category = meta[1].lower() if len(meta) > 1 else "aptitude"
-    # Normalize question_type: lower case and replace spaces with hyphens (e.g., "Normal Csat" -> "normal-csat")
-    question_type = meta[2].lower().strip().replace(" ", "-") if len(meta) > 2 else "normal"
+    
+    # Normalize question_type: lower case, " - " to "-", spaces to hyphens
+    raw_type = meta[2].lower().strip() if len(meta) > 2 else "normal"
+    question_type = re.sub(r'\s*-\s*', '-', raw_type)
+    question_type = re.sub(r'\s+', '-', question_type)
 
     # --- CSAT FIX: Capture any image lines that sit between the type-metadata
     # line (q_idx - 1) and the actual question-number marker line (q_idx).
@@ -88,7 +91,7 @@ def parse_block_regex(text: str) -> dict | None:
     question_lines.append(first_q_line)
     i += 1
 
-    is_options = lambda s: bool(re.match(r'^(?:\([a-dA-Dअ-दए-डीक-घ]\)|[A-D]\s*[:\)])', s, re.I))
+    is_options = lambda s: bool(re.match(r'^(?:\([a-dA-Dअ-दए-डीक-घ]\)|[A-D]\s*[:\.\)])', s, re.I))
     is_pair = lambda s: bool(re.match(r'^(?:Pair\s*\d+\s*:|.*?\s*(?:=|—|–|-)\s*.*)', s, re.I))
     is_stmt = lambda s: bool(re.match(r'^(\d+\s*[\.\)]|\(\d+\))', s, re.I))
     # Note: Hindi doc uses Devanagari visarga 'ः' instead of Latin ':' in 'Answerः' / 'Solutionः'
@@ -103,12 +106,12 @@ def parse_block_regex(text: str) -> dict | None:
             break
 
     def is_options_func(idx, s):
-        if re.match(r'^(?:\([a-dA-Dअ-दए-डीक-घ]\)|[A-D]\s*[:\)])', s, re.I): return True
+        if re.match(r'^(?:\([a-dA-Dअ-दए-डीक-घ]\)|[A-D]\s*[:\.\)])', s, re.I): return True
         if ans_idx != -1 and ans_idx - 4 <= idx < ans_idx: return True
         return False
 
     is_options = lambda idx, s: is_options_func(idx, s)
-    is_options_compat = lambda s: bool(re.match(r'^(?:\([a-dA-Dअ-दए-डीक-घ]\)|[A-D]\s*[:\)])', s, re.I))
+    is_options_compat = lambda s: bool(re.match(r'^(?:\([a-dA-Dअ-दए-डीक-घ]\)|[A-D]\s*[:\.\)])', s, re.I))
 
     # 1. Question text starts at q_idx
     # We want to separate the main question text from statements/pairs.
@@ -255,13 +258,14 @@ def parse_block_regex(text: str) -> dict | None:
     options_images = {}
     opt_map = {'a': 'A', 'b': 'B', 'c': 'C', 'd': 'D', 'अ': 'A', 'ब': 'B', 'स': 'C', 'द': 'D', 'ए': 'A', 'बी': 'B', 'सी': 'C', 'डी': 'D', 'क': 'A', 'ख': 'B', 'ग': 'C', 'घ': 'D'}
     
+    has_markers = False
     while i < len(lines) and not is_ans(lines[i]):
         line = lines[i]
         # Robust marker: Check if line starts with marker or has marker after substantial space
         # And ensure we don't match inside IMG tags by checking the left context
         matches = []
         # Find all potential matches including Hindi markers like (क) or (ए) or (अ)
-        pattern = r'(?:\(([a-dA-Dअ-दए-डीक-घ])\)|\b([a-dA-D])\s*:)'
+        pattern = r'(?:\(([a-dA-Dअ-दए-डीक-घ])\)|\b([a-dA-Dअ-दए-डीक-घ])\s*[:\.])'
         for m in re.finditer(pattern, line, re.I):
             # Check if this match is inside an IMG tag
             pre = line[:m.start()]
@@ -270,6 +274,7 @@ def parse_block_regex(text: str) -> dict | None:
             matches.append(m)
         
         if matches:
+            has_markers = True
             for idx_m, m in enumerate(matches):
                 letter = (m.group(1) or m.group(2)).lower()
                 start_text = m.end()
@@ -277,24 +282,33 @@ def parse_block_regex(text: str) -> dict | None:
                 text_opt = line[start_text:end_text].strip()
                 field = extract_field(text_opt)
                 options[opt_map[letter]] = field["text"]
-                options_images[opt_map[letter]] = field["image"]
+                if field["image"]:
+                    options_images[opt_map[letter]] = field["image"]
             i += 1
-        elif ans_idx != -1 and ans_idx - 4 <= i < ans_idx:
+        elif not has_markers and ans_idx != -1 and ans_idx - 4 <= i < ans_idx:
             # Fallback for MS Word numbered options
-            opt_keys = ['A', 'B', 'C', 'D']
-            letter = opt_keys[len(options)] if len(options) < 4 else 'D'
-            ext = extract_field(line.strip())
-            if letter in options:
-                options[letter] += " " + ext["text"]
+            if re.search(re.escape(IMG_START), line):
+                pass
             else:
-                options[letter] = ext["text"]
-            if ext["image"]: options_images[letter] = ext["image"]
-            i += 1
+                opt_keys = ['A', 'B', 'C', 'D']
+                letter = opt_keys[len(options)] if len(options) < 4 else 'D'
+                ext = extract_field(line.strip())
+                if letter in options:
+                    options[letter] += " " + ext["text"]
+                else:
+                    options[letter] = ext["text"]
+                if ext["image"]: options_images[letter] = ext["image"]
+                i += 1
+                continue
         elif options and not is_stmt(line) and not is_pair(line) and not is_ans(line):
             last_l = sorted(options.keys())[-1]
             ext = extract_field(line)
             options[last_l] += " " + ext["text"]
-            if ext["image"]: options_images[last_l] = ext["image"]
+            if ext["image"]:
+                if not options_images.get(last_l):
+                    options_images[last_l] = ext["image"]
+                elif not options_images.get(last_l + "_hindi"):
+                    options_images[last_l + "_hindi"] = ext["image"]
             i += 1
         else:
             break
@@ -356,8 +370,12 @@ def normalise(q: dict) -> dict | None:
         return None
 
     if len(q["options"]) < 4: return None
-    # Ensure all 4 options have text
-    if any(not str(val).strip() for val in q["options"].values()): return None
+    # Ensure all 4 options have text OR an image
+    for k, val in q["options"].items():
+        has_text = bool(str(val).strip())
+        has_image = bool(q["options_images"].get(k, "").strip())
+        if not has_text and not has_image:
+            return None
 
     if not q["answer"].strip(): return None
 
@@ -488,7 +506,10 @@ def parse_docx_file(file_path: str) -> list:
         l_j      = lines[j].lower().strip()
         l_j_prev = lines[j-1].lower().strip()
 
-        is_type    = l_j      in type_exact
+        # Normalize type for matching (e.g., "normal - csat" -> "normal-csat")
+        l_j_norm = re.sub(r'\s*-\s*', '-', l_j)
+        
+        is_type    = (l_j in type_exact) or (l_j_norm in type_exact)
         is_concept = l_j_prev in concept_exact
 
         if is_type and is_concept:
@@ -508,9 +529,11 @@ def parse_docx_file(file_path: str) -> list:
             # Find the number in this block to keep sequence
             for k in range(i, min(i+10, len(lines))):
                 m = re.match(q_marker_re, lines[k])
-                if m and m.group(1):
-                    last_q_val = int(m.group(1))
-                    break
+                if m:
+                    val = m.group(1) or m.group(2)
+                    if val:
+                        last_q_val = int(val)
+                        break
             in_solution = False
             continue
             
@@ -543,7 +566,7 @@ def parse_docx_file(file_path: str) -> list:
                             # i.e. nothing was detected yet, or check prev line context
                             prev_line = lines[i-1].strip() if i > 0 else ""
                             looks_like_new = not re.search(
-                                r'(Statement|Correct|Incorrect|सही|गलत|\bAnswer\b|\bSolution\b|व्याख्या)',
+                                r'(Statement|Correct|Incorrect|सही|गलत|\bAnswer\b|\bSolution\b|व्याख्या|Fundamental|Rights)',
                                 prev_line, re.I)
                             if not looks_like_new:
                                 continue
@@ -617,6 +640,21 @@ def merge_questions(en_qs: list, output_file: str = None, incremental_save: bool
         sol_img_hindi = en_q.get("solution_image_hindi", "").strip()
         hi_solution_image = sol_img_hindi if (not has_sol_text and sol_img_hindi) else en_q["solution_image"]
 
+        # Prepare for options routing
+        hi_options_images = {}
+        # Pre-calculate options translation to get correct routing
+        translated_options = {}
+        for k, v in en_q["options"].items():
+            translated_options[k] = translate_to_hindi(v)
+            
+            # Option image routing
+            opt_img_en = en_q["options_images"].get(k, "")
+            opt_img_hi = en_q["options_images"].get(k + "_hindi", "")
+            
+            # If no text, use Hindi image for Hindi side if available
+            has_opt_text = bool(v.strip())
+            hi_options_images[k] = opt_img_hi if (not has_opt_text and opt_img_hi) else opt_img_en
+
         hi_side = {
             "number": num,
             "subtopic": en_q["subtopic"],
@@ -627,8 +665,8 @@ def merge_questions(en_qs: list, output_file: str = None, incremental_save: bool
             "statements": [],
             "pairs": [],
             "lastQuestion": {"text": "", "image": ""},
-            "options": {},
-            "options_images": en_q["options_images"],
+            "options": translated_options,
+            "options_images": hi_options_images,
             "answer": en_q["answer"],
             "solution": translate_to_hindi(en_q["solution"]),
             "solution_image": hi_solution_image
@@ -664,14 +702,10 @@ def merge_questions(en_qs: list, output_file: str = None, incremental_save: bool
             hi_side["lastQuestion"]["text"] = translate_to_hindi(en_q["lastQuestion"]["text"])
             hi_side["lastQuestion"]["image"] = en_q["lastQuestion"]["image"]
 
-        # Translate Options
-        for k, v in en_q["options"].items():
-            hi_side["options"][k] = translate_to_hindi(v)
-
         # Mark as partial if translation failed.
         # For image-only questions: no translated text is OK as long as we have an image.
         q_ok  = bool(hi_side["question"]) or bool(hi_side["question_image"])
-        opts_ok = all(bool(opt) for opt in hi_side["options"].values())
+        opts_ok = all(bool(opt) for opt in hi_side["options"].values()) or any(bool(img) for img in hi_side["options_images"].values())
         if not q_ok or not opts_ok:
             en_q["status"] = "partial_translation"
             failed_translations.append({
@@ -688,6 +722,11 @@ def merge_questions(en_qs: list, output_file: str = None, incremental_save: bool
         for row in en_q.get("pairs", []):
             for p_item in row:
                 p_item.pop("image_hindi", None)
+        
+        # Cleanup options_images _hindi keys
+        for k in list(en_q.get("options_images", {}).keys()):
+            if k.endswith("_hindi"):
+                en_q["options_images"].pop(k)
 
         merged.append({
             "number": num,
