@@ -45,6 +45,11 @@ def parse_block_regex(text: str) -> dict | None:
             q_idx = idx
             break
     
+    # Fallback: If no explicit marker found, but we have metadata (at least 3 lines),
+    # the 4th line is likely the question start.
+    if q_idx == -1 and len(lines) >= 3:
+        q_idx = min(3, len(lines) - 1)
+    
     if q_idx == -1: return None
     
     meta = lines[:q_idx]
@@ -458,10 +463,20 @@ def parse_docx_file(file_path: str) -> list:
             p_text = get_runs_text(item._element)
             
             # Check for numbering in XML
-            if item._element.xpath('.//w:numPr'):
-                # Try to get ilvl (indent level)
-                ilvls = item._element.xpath('.//w:ilvl/@w:val')
-                lvl = int(ilvls[0]) if ilvls else 0
+            # Check for numbering in XML or Style
+            has_num = False
+            try:
+                if item._element.xpath('.//w:numPr'):
+                    has_num = True
+            except:
+                pass
+            
+            if not has_num:
+                style_name = item.style.name.lower()
+                if "list" in style_name or "number" in style_name:
+                    has_num = True
+
+            if has_num:
                 # We'll just prepend a simple (1) for all levels to trigger detection
                 p_text = f"(1) {p_text}"
 
