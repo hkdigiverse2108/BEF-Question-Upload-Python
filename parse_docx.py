@@ -98,8 +98,10 @@ def parse_block_regex(text: str) -> dict | None:
     i += 1
 
     is_options = lambda s: bool(re.match(r'^(?:\([a-dA-Dअ-दए-डीक-घ]\)|[A-D]\s*[:\.\)])', s, re.I))
-    is_pair = lambda s: bool(re.match(r'^(?:Pair\s*\d+\s*:|.*?\s*(?:=|—|–|-)\s*.*)', s, re.I))
-    is_stmt = lambda s: bool(re.match(r'^(\d+\s*[\.\)]|\(\d+\))', s, re.I))
+    is_stmt = lambda s: IMG_START not in s and bool(re.match(r'^\s*(\d+\s*[\.\)]|\(\d+\))', s, re.I))
+    # Ignore image markers in pair detection to avoid matching file paths
+    is_pair = lambda s: IMG_START not in s and bool(re.match(r'^(?:Pair\s*\d+\s*:|.*?\s*(?:=|—|–|-)\s*.*)', s, re.I))
+    is_img = lambda s: IMG_START in s
     # Note: Hindi doc uses Devanagari visarga 'ः' instead of Latin ':' in 'Answerः' / 'Solutionः'
     is_ans = lambda s: bool(re.match(r'^\s*(Answer|उत्तर)\s*[:\u0903]', s, re.I))
     is_sol = lambda s: bool(re.match(r'^\s*(Solution|व्याख्या|समाधान)(?:[:\u0903]|\b)', s, re.I))
@@ -306,7 +308,7 @@ def parse_block_regex(text: str) -> dict | None:
                 if ext["image"]: options_images[letter] = ext["image"]
                 i += 1
                 continue
-        elif options and not is_stmt(line) and not is_pair(line) and not is_ans(line):
+        elif options and (is_img(line) or (not is_stmt(line) and not is_pair(line) and not is_ans(line))):
             last_l = sorted(options.keys())[-1]
             ext = extract_field(line)
             options[last_l] += " " + ext["text"]
@@ -612,7 +614,9 @@ def parse_docx_file(file_path: str) -> list:
                 failed_blocks.append({
                     "reason": "Normalization failed (e.g., less than 4 options)",
                     "text": block_text,
-                    "q_number": q.get("number", "Unknown")
+                    "q_number": q.get("number", "Unknown"),
+                    "options_count": len(q["options"]),
+                    "options": q["options"]
                 })
         else:
             failed_blocks.append({
@@ -633,10 +637,12 @@ def translate_to_hindi(text: str) -> str:
         print(f"Translation Error: {e}")
         return ""
 
-def merge_questions(en_qs: list, output_file: str = None, incremental_save: bool = False) -> tuple[list, list]:
+def merge_questions(en_qs: list, parsing_failures: list = None, output_file: str = None, incremental_save: bool = False) -> tuple[list, list]:
     merged = []
     failed_translations = []
     total = len(en_qs)
+    
+    parsing_failures = parsing_failures or []
     
     for idx, en_q in enumerate(en_qs):
         num = en_q["number"]
@@ -757,7 +763,11 @@ def merge_questions(en_qs: list, output_file: str = None, incremental_save: bool
         # Save incrementally if requested
         if incremental_save and output_file:
             with open(output_file, "w", encoding="utf-8") as f:
-                json.dump({"processed": merged, "failed_translations": failed_translations}, f, indent=2, ensure_ascii=False)
+                json.dump({
+                    "processed": merged, 
+                    "parsing_failures": parsing_failures,
+                    "failed_translations": failed_translations
+                }, f, indent=2, ensure_ascii=False)
             
         # Small sleep to avoid rate limiting
         time.sleep(0.5)
@@ -769,7 +779,7 @@ def process_document(file_path: str, output_file: str = "parsed_questions.json")
     en_qs, parsing_failures = parse_docx_file(file_path)
     
     # For API, we want to return both successful and failed ones
-    merged, translation_failures = merge_questions(en_qs, output_file=output_file, incremental_save=True)
+    merged, translation_failures = merge_questions(en_qs, parsing_failures=parsing_failures, output_file=output_file, incremental_save=True)
     
     return {
         "processed": merged,
