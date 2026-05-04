@@ -52,9 +52,10 @@ def parse_block_regex(text: str) -> dict | None:
     category = meta[1].lower() if len(meta) > 1 else "aptitude"
     
     # Normalize question_type: lower case, " - " to "-", spaces to hyphens
+    # Handle all variants of dashes (hyphen, en-dash, em-dash) and non-breaking spaces (\u00A0)
     raw_type = meta[2].lower().strip() if len(meta) > 2 else "normal"
-    question_type = re.sub(r'\s*-\s*', '-', raw_type)
-    question_type = re.sub(r'\s+', '-', question_type)
+    question_type = re.sub(r'[\s\u00A0]*[–—\-][\s\u00A0]*', '-', raw_type)
+    question_type = re.sub(r'[\s\u00A0]+', '-', question_type)
 
     # --- CSAT FIX: Capture any image lines that sit between the type-metadata
     # line (q_idx - 1) and the actual question-number marker line (q_idx).
@@ -507,7 +508,8 @@ def parse_docx_file(file_path: str) -> list:
         l_j_prev = lines[j-1].lower().strip()
 
         # Normalize type for matching (e.g., "normal - csat" -> "normal-csat")
-        l_j_norm = re.sub(r'\s*-\s*', '-', l_j)
+        # Handle all variants of dashes and spaces
+        l_j_norm = re.sub(r'[\s\u00A0]*[–—\-][\s\u00A0]*', '-', l_j)
         
         is_type    = (l_j in type_exact) or (l_j_norm in type_exact)
         is_concept = l_j_prev in concept_exact
