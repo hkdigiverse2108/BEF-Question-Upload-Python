@@ -502,35 +502,47 @@ def parse_docx_file(file_path: str) -> list:
     # Hybrid block detection
     block_starts = []
     
-    # 1. Triplet-based detection
-    # Use EXACT line matching so question text that merely contains "concept" or
-    # "statement" does not falsely fire the detector.
+    # Pre-process lines to remove hidden Unicode whitespace/artifacts
+    clean_lines = []
+    for l in lines:
+        # Replace non-breaking spaces and other artifacts with standard space
+        cl = l.replace('\u00A0', ' ').replace('\u200b', '').strip()
+        clean_lines.append(cl)
+
+    # 1. Fuzzy Triplet-based detection
     triplet_starts = set()
 
-    # 'Satement' (missing second 't') is a known typo in the English source doc
-    # CSAT variants: 'normal-csat', 'statement-csat' and their Hindi equivalents
-    type_exact    = {"normal", "statement", "satement", "pair",
-                     "normal ", "statement ", "satement ", "pair ",
-                     "normal-csat", "statement-csat", "satement-csat", "pair-csat",
-                     "normal-csat ", "statement-csat ", "satement-csat ", "pair-csat ",
-                     "सामान्य", "कथन", "जोड़ी",
-                     "सामान्य-csat", "कथन-csat", "जोड़ी-csat"}
-    concept_exact = {"concept", "concept ", "aptitude", "aptitude ",
-                     "कॉन्सेप्ट", "कॉन्सेप्ट "}
+    # Normalize labels for ultra-fuzzy matching (ignores dashes and spaces)
+    def norm_label(s):
+        s = s.lower().strip()
+        # Remove all dashes, spaces, and non-alphanumeric characters for comparison
+        # (keeping Hindi characters)
+        s = re.sub(r'[^a-z0-9\u0900-\u097F]', '', s)
+        return s
 
-    for j in range(1, len(lines)):
-        l_j      = lines[j].lower().strip()
-        l_j_prev = lines[j-1].lower().strip()
+    # These are normalized keys (no dashes, no spaces)
+    type_exact = {"normal", "statement", "pair", "normalcsat", "statementcsat", "paircsat", "सामान्य", "कथन", "जोड़ी", "सामान्यcsat", "कथनcsat", "जोड़ीcsat"}
+    concept_exact = {"concept", "aptitude", "कॉन्सेप्ट"}
 
-        # Normalize type for matching (e.g., "normal - csat" -> "normal-csat")
-        # Handle all variants of dashes and spaces
-        l_j_norm = re.sub(r'[\s\u00A0]*[–—\-][\s\u00A0]*', '-', l_j)
+    for j in range(len(clean_lines)):
+        l_j = norm_label(clean_lines[j])
         
-        is_type    = (l_j in type_exact) or (l_j_norm in type_exact)
-        is_concept = l_j_prev in concept_exact
-
-        if is_type and is_concept:
-            triplet_starts.add(max(0, j - 2))
+        # If this line looks like a question type
+        if any(t in l_j for t in type_exact):
+            # Look back up to 3 lines for a concept marker
+            found_concept = False
+            for look_back in range(1, 4):
+                if j - look_back >= 0:
+                    prev_l = norm_label(clean_lines[j - look_back])
+                    if any(c in prev_l for c in concept_exact):
+                        # Found a triplet! Block starts at the line before concept (subtopic)
+                        triplet_starts.add(max(0, j - look_back - 1))
+                        found_concept = True
+                        break
+            
+            # If it's a CSAT type, we are even more aggressive
+            if "csat" in l_j and not found_concept:
+                triplet_starts.add(max(0, j - 2)) # Assume subtopic/concept are there
     
     # 2. Sequential/Contextual detection
     # Any line matching the question marker that follows a solution block
