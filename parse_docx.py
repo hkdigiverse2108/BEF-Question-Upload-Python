@@ -419,11 +419,10 @@ def normalise(q: dict) -> dict | None:
 
     return q
 
-def parse_docx_file(file_path: str) -> list:
+def parse_docx_file(file_path: str, img_dir: str = "data/images") -> list:
     from docx.text.paragraph import Paragraph
     from docx.table import Table
     doc = docx.Document(file_path)
-    img_dir = "data/images"
     os.makedirs(img_dir, exist_ok=True)
     img_map = {r_id: rel.target_part for r_id, rel in doc.part.rels.items() if 'image' in rel.reltype}
 
@@ -530,13 +529,13 @@ def parse_docx_file(file_path: str) -> list:
         l_j = norm_label(clean_lines[j])
         
         # If this line looks like a question type
-        if any(t in l_j for t in type_exact):
+        if l_j in type_exact:
             # Look back up to 3 lines for a concept marker
             found_concept = False
             for look_back in range(1, 4):
                 if j - look_back >= 0:
                     prev_l = norm_label(clean_lines[j - look_back])
-                    if any(c in prev_l for c in concept_exact):
+                    if prev_l in concept_exact:
                         # Found a triplet! Block starts at the line before concept (subtopic)
                         triplet_starts.add(max(0, j - look_back - 1))
                         found_concept = True
@@ -649,16 +648,31 @@ def translate_to_hindi(text: str) -> str:
         print(f"Translation Error: {e}")
         return ""
 
-def merge_questions(en_qs: list, parsing_failures: list = None, output_file: str = None, incremental_save: bool = False) -> tuple[list, list]:
+def merge_questions(en_qs: list, hi_qs: list = None, parsing_failures: list = None, output_file: str = None, incremental_save: bool = False) -> tuple[list, list]:
     merged = []
     failed_translations = []
     total = len(en_qs)
     
     parsing_failures = parsing_failures or []
+    hi_map = {q["number"]: q for q in hi_qs} if hi_qs else {}
     
     for idx, en_q in enumerate(en_qs):
         num = en_q["number"]
-        print(f"[{idx+1}/{total}] Translating Question {num}...")
+        hi_q_source = hi_map.get(num)
+        used_translation = False
+        
+        if hi_q_source:
+            print(f"[{idx+1}/{total}] Matching Question {num} with Hindi document...")
+        else:
+            print(f"[{idx+1}/{total}] Translating Question {num}...")
+        
+        # Helper to get field with translation fallback
+        def get_hi_field(en_val, hi_obj, field_name):
+            nonlocal used_translation
+            if hi_obj and hi_obj.get(field_name):
+                return hi_obj[field_name]
+            used_translation = True
+            return translate_to_hindi(en_val)
         
         # Build Hindi side by translating English fields.
         # Rule:
@@ -677,10 +691,16 @@ def merge_questions(en_qs: list, parsing_failures: list = None, output_file: str
 
         # Prepare for options routing
         hi_options_images = {}
-        # Pre-calculate options translation to get correct routing
+        # Pre-calculate options translation/matching to get correct routing
         translated_options = {}
+        hi_options_source = hi_q_source.get("options", {}) if hi_q_source else {}
+        
         for k, v in en_q["options"].items():
-            translated_options[k] = translate_to_hindi(v)
+            hi_opt_text = hi_options_source.get(k, "")
+            if not hi_opt_text:
+                hi_opt_text = translate_to_hindi(v)
+                used_translation = True
+            translated_options[k] = hi_opt_text
             
             # Option image routing
             opt_img_en = en_q["options_images"].get(k, "")
@@ -695,7 +715,7 @@ def merge_questions(en_qs: list, parsing_failures: list = None, output_file: str
             "subtopic": en_q["subtopic"],
             "category": en_q["category"],
             "question_type": en_q["question_type"],
-            "question": translate_to_hindi(en_q["question"]),
+            "question": get_hi_field(en_q["question"], hi_q_source, "question"),
             "question_image": hi_question_image,
             "statements": [],
             "pairs": [],
@@ -703,38 +723,68 @@ def merge_questions(en_qs: list, parsing_failures: list = None, output_file: str
             "options": translated_options,
             "options_images": hi_options_images,
             "answer": en_q["answer"],
-            "solution": translate_to_hindi(en_q["solution"]),
+            "solution": get_hi_field(en_q["solution"], hi_q_source, "solution"),
             "solution_image": hi_solution_image
         }
 
-        # Translate Statements
-        for stat in en_q["statements"]:
+        # Translate/Match Statements
+        en_stats = en_q.get("statements", [])
+        hi_stats_source = hi_q_source.get("statements", []) if hi_q_source else []
+        
+        for s_idx, stat in enumerate(en_stats):
             stat_has_text = bool(stat.get("text", "").strip())
             stat_img_hi = stat.get("image_hindi", "").strip()
             hi_stat_img = stat_img_hi if (not stat_has_text and stat_img_hi) else stat.get("image", "")
 
+            # If we have a matching Hindi statement, use its text
+            hi_stat_text = ""
+            if s_idx < len(hi_stats_source):
+                hi_stat_text = hi_stats_source[s_idx].get("text", "")
+            
+            if not hi_stat_text:
+                hi_stat_text = translate_to_hindi(stat.get("text", ""))
+                used_translation = True
+
             hi_side["statements"].append({
-                "text": translate_to_hindi(stat.get("text", "")),
+                "text": hi_stat_text,
                 "image": hi_stat_img
             })
 
-        # Translate Pairs
-        for row in en_q["pairs"]:
+        # Translate/Match Pairs
+        en_pairs = en_q.get("pairs", [])
+        hi_pairs_source = hi_q_source.get("pairs", []) if hi_q_source else []
+        
+        for r_idx, row in enumerate(en_pairs):
             hi_row = []
-            for p_item in row:
+            hi_row_source = hi_pairs_source[r_idx] if r_idx < len(hi_pairs_source) else []
+            
+            for c_idx, p_item in enumerate(row):
                 p_has_text = bool(p_item.get("text", "").strip())
                 p_img_hi = p_item.get("image_hindi", "").strip()
                 hi_p_img = p_img_hi if (not p_has_text and p_img_hi) else p_item.get("image", "")
 
+                hi_cell_text = ""
+                if c_idx < len(hi_row_source):
+                    hi_cell_text = hi_row_source[c_idx].get("text", "")
+                
+                if not hi_cell_text:
+                    hi_cell_text = translate_to_hindi(p_item.get("text", ""))
+                    used_translation = True
+
                 hi_row.append({
-                    "text": translate_to_hindi(p_item.get("text", "")),
+                    "text": hi_cell_text,
                     "image": hi_p_img
                 })
             hi_side["pairs"].append(hi_row)
 
-        # Translate Last Question
+        # Translate/Match Last Question
         if en_q["lastQuestion"]["text"]:
-            hi_side["lastQuestion"]["text"] = translate_to_hindi(en_q["lastQuestion"]["text"])
+            hi_lq_text = hi_q_source.get("lastQuestion", {}).get("text", "") if hi_q_source else ""
+            if not hi_lq_text:
+                hi_lq_text = translate_to_hindi(en_q["lastQuestion"]["text"])
+                used_translation = True
+            
+            hi_side["lastQuestion"]["text"] = hi_lq_text
             hi_side["lastQuestion"]["image"] = en_q["lastQuestion"]["image"]
 
         # Mark as partial if translation failed.
@@ -772,8 +822,8 @@ def merge_questions(en_qs: list, parsing_failures: list = None, output_file: str
             "hindi": hi_side
         })
         
-        # Save incrementally if requested
-        if incremental_save and output_file:
+        # Save incrementally every 10 questions to balance speed and safety
+        if incremental_save and output_file and (idx % 10 == 0 or idx == total - 1):
             with open(output_file, "w", encoding="utf-8") as f:
                 json.dump({
                     "processed": merged, 
@@ -781,17 +831,23 @@ def merge_questions(en_qs: list, parsing_failures: list = None, output_file: str
                     "failed_translations": failed_translations
                 }, f, indent=2, ensure_ascii=False)
             
-        # Small sleep to avoid rate limiting
-        time.sleep(0.5)
+        # Small sleep ONLY if translation was used (to avoid rate limiting)
+        if used_translation:
+            time.sleep(0.5)
             
     return merged, failed_translations
 
-def process_document(file_path: str, output_file: str = "parsed_questions.json") -> dict:
-    """Helper to parse and translate a document in one go."""
-    en_qs, parsing_failures = parse_docx_file(file_path)
+def process_document(en_file_path: str, hi_file_path: str = None, output_file: str = "parsed_questions.json", img_dir: str = "data/images") -> dict:
+    """Helper to parse and translate/merge a document in one go."""
+    en_qs, parsing_failures = parse_docx_file(en_file_path, img_dir=img_dir)
+    
+    hi_qs = None
+    if hi_file_path and os.path.exists(hi_file_path):
+        print(f"Parsing Hindi document: {hi_file_path}")
+        hi_qs, _ = parse_docx_file(hi_file_path, img_dir=img_dir)
     
     # For API, we want to return both successful and failed ones
-    merged, translation_failures = merge_questions(en_qs, parsing_failures=parsing_failures, output_file=output_file, incremental_save=True)
+    merged, translation_failures = merge_questions(en_qs, hi_qs=hi_qs, parsing_failures=parsing_failures, output_file=output_file, incremental_save=True)
     
     return {
         "processed": merged,
@@ -806,7 +862,21 @@ def main():
     os.chdir(project_root)
     
     os.makedirs("data", exist_ok=True)
-    process_document("english.docx", "parsed_questions.json")
+    en_path = "english.docx"
+    hi_path = "hindi.docx"
+    
+    # Check if they exist in data/ or root
+    if not os.path.exists(en_path):
+        en_path = os.path.join("data", "english.docx")
+    if not os.path.exists(hi_path):
+        hi_path = os.path.join("data", "hindi.docx")
+        
+    if os.path.exists(en_path):
+        hi_found = os.path.exists(hi_path)
+        process_document(en_path, hi_path if hi_found else None, "parsed_questions.json")
+    else:
+        print(f"Error: English document not found at {en_path}")
+    
     print(f"DONE: Document processed.")
 
 if __name__ == "__main__":
