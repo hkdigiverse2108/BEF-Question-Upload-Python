@@ -66,11 +66,14 @@ async def process_docx_endpoint(
         raise HTTPException(status_code=500, detail=str(e))
 
     finally:
-        # Cleanup temporary files
-        if os.path.exists(en_temp_path):
-            os.remove(en_temp_path)
-        if hi_temp_path and os.path.exists(hi_temp_path):
-            os.remove(hi_temp_path)
+        # Only delete the uploaded DOCX files as per user request
+        try:
+            if os.path.exists(en_temp_path):
+                os.remove(en_temp_path)
+            if hi_temp_path and os.path.exists(hi_temp_path):
+                os.remove(hi_temp_path)
+        except Exception as cleanup_error:
+            print(f"Error during cleanup: {cleanup_error}")
 
 @app.get("/")
 async def root():
